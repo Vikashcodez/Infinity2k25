@@ -45,9 +45,9 @@ function App() {
  }, []);
 
  return (
-   <main ref={mainRef} className=" overflow-x-hidden">
+   <main ref={mainRef} className=" overflow-x-hidden mb-0 ">
     <SpotLight
-        className="-top-40 left-0 md:left-60 md:-top-20"
+        className="-top-20 left-0 md:left-60 md:-top-20"
         fill="white"
       />
      <Suspense
@@ -96,13 +96,12 @@ function App() {
          <p className="w-[50%] border-0 border-red-700"></p>
 
          <p className="text-white w-[50%] text-center px-4  ">
-         <div className="flex flex-col items-center justify-center">
-            <div className="text-6xl font-sans font-extrabold lg:text-9xl mt-3">
+         <div className="flex flex-col items-center justify-center after:text-6xl font-sans font-extrabold lg:text-9xl mt-3">
+          
               INFINITY
               <br />
               2K25
-            </div>
-            <div></div>
+            
           </div>
          </p>
        </section>
