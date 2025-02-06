@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { Link,useNavigate } from "react-router-dom";
 import logo from "../assets/infinity-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -11,12 +13,12 @@ const Navbar = () => {
   return (
     <nav>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} className="h-8" alt="Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             INFINITY 2K25
           </span>
-        </a>
+        </Link>
         <button
           onClick={toggleMenu}
           type="button"
@@ -36,12 +38,12 @@ const Navbar = () => {
         </button>
         <div className={`w-full md:block md:w-auto ${isOpen ? "" : "hidden"}`} id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border text-white border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-            <li><a href="/" className="nav-link">Home</a></li>
-            <li><a href="/events" className="nav-link">Events</a></li>
-            <li><a href="/gallery" className="nav-link">Gallery</a></li>
-            <li><a href="/workshop" className="nav-link">Workshop</a></li>
-            <li><a href="/sponsors" className="nav-link">Sponsors</a></li>
-            <li><a href="/our-team" className="nav-link">Our Team</a></li>
+          <li><button onClick={() => navigate("/")} className="nav-link">Home</button></li>
+            <li><button onClick={() => navigate("/Events")} className="nav-link">Events</button></li>
+            <li><button onClick={() => navigate("/gallery")} className="nav-link">Gallery</button></li>
+            <li><button onClick={() => navigate("/workshop")} className="nav-link">Workshop</button></li>
+            <li><button onClick={() => navigate("/sponsors")} className="nav-link">Sponsors</button></li>
+            <li><button onClick={() => navigate("/our-team")} className="nav-link">Our Team</button></li>
           </ul>
         </div>
       </div>
