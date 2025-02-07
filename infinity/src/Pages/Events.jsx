@@ -9,7 +9,7 @@ import { BsArrowLeftCircleFill ,BsArrowRightCircleFill } from 'react-icons/bs';
 
 const Events = () => {
     const [present,setPresent]=useState(0); //present image state
-    
+
     const images=[I1,I2,I3]; //add every image object here
     const data=slides.slides;
     // Whole window
@@ -44,7 +44,7 @@ const Events = () => {
             {data.map((item,index)=>(
                 <div id={`${index}`} className="container-2">
                     <h1 id="heading">{item.title}</h1><br/>
-                    <p>{item.details}</p>
+                    <p className="paragraph" style={{ whiteSpace: "pre-wrap" }}>{item.details}</p>
                 </div>
             ))}
         </div>
