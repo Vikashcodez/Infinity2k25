@@ -1,17 +1,20 @@
-import react , { useState } from "react";
+import react , { useState , useEffect } from "react";
 import slides from "../data/slides.json"
 import "./Events.css";
-import  I1 from "../data/1.jpeg";
+import  I1 from "../data/1.jpeg"; //import every image in react
 import  I2 from "../data/2.jpeg";
 import I3 from "../data/3.jpeg";
 
 import { BsArrowLeftCircleFill ,BsArrowRightCircleFill } from 'react-icons/bs';
 
 const Events = () => {
-    const [present,setPresent]=useState(0);
-    const images=[I1,I2,I3];
+    const [present,setPresent]=useState(0); //present image state
+    
+    const images=[I1,I2,I3]; //add every image object here
     const data=slides.slides;
-    return <div className="main">
+    // Whole window
+    return  <div className="main">
+        {/* carousel */}
         <div className="container">
         <BsArrowLeftCircleFill className="arrow arrow-left" onClick={()=>{
             setPresent((present+data.length-1)%data.length);
@@ -23,7 +26,7 @@ const Events = () => {
             width='600vw'
             height='100%'
             className={(index===present)?"slide":"slide-i"}
-            onClick={scrollTo()}/></a>
+            /></a>
         ))} 
         <span className="indicators">
             {data.map((_,index)=>(
@@ -37,9 +40,10 @@ const Events = () => {
         }}/>
         </div>
         <div>
+            {/* information window */}
             {data.map((item,index)=>(
                 <div id={`${index}`} className="container-2">
-                    <h1>{item.title}</h1><br/>
+                    <h1 id="heading">{item.title}</h1><br/>
                     <p>{item.details}</p>
                 </div>
             ))}
