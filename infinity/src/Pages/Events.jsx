@@ -1,11 +1,10 @@
 import react , { useState , useEffect } from "react";
 import slides from "../data/slides.json"
 import "./Events.css";
-import  I1 from "../data/1.jpeg"; //import every image in react
-import  I2 from "../data/2.jpeg";
-import I3 from "../data/3.jpeg";
-
 import { BsArrowLeftCircleFill ,BsArrowRightCircleFill } from 'react-icons/bs';
+import I1 from "../data/1.jpeg";
+import I2 from "../data/2.jpeg";
+import I3 from "../data/3.jpeg";
 
 const Events = () => {
     const [present,setPresent]=useState(0); //present image state
