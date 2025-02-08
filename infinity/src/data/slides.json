@@ -14,6 +14,11 @@
             "src":"../data/3.jpeg",
             "title":"Image3",
             "details":"Some wiki implementations keep a <br/>record of changes  made to wiki pages, and may store every version of the page permanently. This allows authors to revert a page to an older version to rectify a mistake, or counteract a malicious or inappropriate edit to its content.[13]These stores are typically presented for each page in a list, called a log or edit history, available from the page via a link in the interface. The list displays metadata for each revision to the page, such as the time and date of when it was stored, and the name of the person who created it, alongside a link to view that specific revision. A diff (short for difference) feature may be available, which highlights the changes between any two revisions.Edit summariesEdit summary redirects here. For the Wikipedia help page, see Help:Edit summary.he edit history view in many wiki implementations will include edit summaries written by users when submitting changes to a page. Similar to the function of a log message in a revision control system, an edit summary is a short piece of text which summarizes and perhaps explains the change, for example Corrected grammar or Fixed table formatting to not extend past page width. It is not inserted into the article's main text."
+        },
+        {
+            "src":"../data/4.jpeg",
+            "title":"Image4",
+            "details":"this is Image 4"
         }
     ]
 
