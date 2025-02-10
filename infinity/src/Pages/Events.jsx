@@ -3,11 +3,17 @@ import { motion } from "framer-motion";
 import "./Events.css";
 import slides from "../data/slides.json";
 
+//icon images
+import icon2 from '../data/arrowForward.png';
+import icon1 from '../data/arrowBack.png';
+
 // Import 4 images
 import I1 from "../data/1.jpeg";
 import I2 from "../data/2.jpeg";
 import I3 from "../data/3.jpeg";
 import I4 from "../data/4.png";
+
+
 
 const Events = () => {
   const images = [I1, I2, I3, I4]; // 4 images in total
@@ -66,13 +72,13 @@ const Events = () => {
           onClick={handlePrev}
           className="absolute left-10 text-white bg-gray-800 px-4 py-2 rounded-md"
         >
-          Prev
+        <img src={icon1} alt="prev" width="30rem" />
         </button>
         <button
           onClick={handleNext}
           className="absolute right-10 text-white bg-gray-800 px-4 py-2 rounded-md"
         >
-          Next
+        <img src={icon2} alt="next" width="30rem" />
         </button>
       </div>
 
