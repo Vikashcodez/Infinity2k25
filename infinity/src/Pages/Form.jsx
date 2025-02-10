@@ -9,6 +9,7 @@ function Form() {
     const [image, setImage] = useState(null);
     const [imageUrl, setImageUrl] = useState(""); 
 
+    var max=3,min=1 // define max and min 
     // Replace with your actual ImgBB API Key
     const IMGBB_API_KEY = "735c7c4573006a1488d0ebbcd20fa89b";
 
@@ -19,8 +20,16 @@ function Form() {
     };
 
     const handleAdd = () => {
+        if(members.length<=max)
         setMembers([...members, { id: members.length + 1, name: '', email: '' }]);
     };
+    const handleRemove= ()=>{
+        if(members.length>min){
+        var newMembers=[...members];
+        newMembers.pop();
+        setMembers(newMembers);
+        }
+    }
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -92,7 +101,7 @@ function Form() {
             <form className="p-6" onSubmit={handleSubmit}>
                 <div id="team" className="space-y-4">
                     {members.map((member) => (
-                        <div key={member.id} className="flex flex-col items-center">
+                        <div key={member.id} className="flex flex-row items-center" id='member'>
                             <label className="text-white">Name:</label>
                             <input 
                                 type="text" 
@@ -120,20 +129,23 @@ function Form() {
                         type="file" 
                         onChange={handleImageChange}
                         className="mt-2 p-2 w-64 text-white"
+                        id='file-button'
                     />
                 </div>
 
                 <button 
                     type="button" 
                     onClick={handleAdd} 
-                    className="mt-4 border border-white hover:bg-white hover:text-black text-white font-bold py-2 px-4 rounded focus:outline-none"
+                    className="mt-4 border border-blue-500 hover:bg-white hover:text-black text-white font-bold py-2 px-4 rounded focus:outline-none"
                 >
                     Add Member
                 </button>
-
+                <button
+                className="mt-4 border border-red-500 hover:bg-white hover:text-black text-white font-bold py-2 px-4 rounded focus:outline-none ml-6"
+                onClick={handleRemove}> Remove Member </button>
                 <button 
                     type="submit" 
-                    className="mt-4 border border-green-500 hover:bg-green-500 hover:text-black text-white font-bold py-2 px-4 rounded focus:outline-none ml-4"
+                    className="mt-4 border border-green-500 hover:bg-green-500 hover:text-black text-white font-bold py-2 px-4 rounded focus:outline-none ml-10"
                 >
                     Submit
                 </button>
