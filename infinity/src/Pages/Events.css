@@ -21,3 +21,12 @@
 .button{
     margin: 1rem;
 }
+#member{
+    gap: 1rem;
+}
+input::file-selector-button{
+    color: white;
+    background-color: transparent;
+    border-radius: 1rem;
+
+}
