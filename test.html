@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        Name: <input type="text" id="name" required>
+        Email: <input type="email" id="email" required>
+        Name: <input type="text" id="name2" required>
+        Email: <input type="email" id="email2" required>
+        <input type="hidden" id="event" value="abcd">
+        <input type="submit" value="Register">
+    </form>
+    <p id="message"></p>
+    <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            const formdata = {
+                participants:
+                [
+                    {
+                        name: document.getElementById('name').value.trim(),
+                        email: document.getElementById('email').value.trim(),
+                    },
+                    {
+                        name: document.getElementById('name2').value.trim(),
+                        email: document.getElementById('email2').value.trim(),
+                    }
+                ],
+                event: document.getElementById('event').value
+            };
+
+            fetch('http://localhost:15000/Register', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formdata)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("message").innerText = "Successfully Registered!";
+                document.getElementById("form").reset();
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById("message").innerText = "Registration Failed. Try again.";
+            });
+        });
+    </script>
+</body>
+</html>
