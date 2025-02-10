@@ -89,6 +89,7 @@ const Events = () => {
         <p className="paragraph" style={{ whiteSpace: "pre-wrap" }}>
           {data[(startIndex + 1) % data.length].details}
         </p>
+        <a href="/form?event=codecraft"><button>register</button></a>
       </div>
     </div>
   );

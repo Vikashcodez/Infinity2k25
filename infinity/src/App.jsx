@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/workshop" element={<Workshop />} />
           <Route path="/sponsors" element={<Sponsors />} /> */}
           <Route path="/our-team" element={<OurTeam />} />
-          <Route path="/form" element={<Form type="e" event="codecraft"/>}/>
+          <Route path="/form" element={<Form />}/>
         </Routes>
       </Router>
       <StarsCanvas />

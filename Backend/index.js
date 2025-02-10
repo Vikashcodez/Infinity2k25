@@ -4,11 +4,11 @@ const app= express();
 const PORT= 15000;
 const postgres=require('postgres');
 require('dotenv').config();  
-console.log("DATABASE_URL:", process.env.DATABASE_URL);
-const connectionString = process.env.DATABASE_URL
+//console.log("DATABASE_URL:", process.env.DATABASE_URL);
+const connectionString = 'postgresql://postgres.dvugzaioqspylxbhukak:CHqvLPYKP5qOIQ9E@aws-0-ap-south-1.pooler.supabase.com:6543/postgres'
 const sql = postgres(connectionString,{ ssl: { rejectUnauthorized: false } })
 app.use(cors({
-    origin:'http://localhost:5501'
+    origin:'http://localhost:5173'
 }));
 app.use(express.json());
 
