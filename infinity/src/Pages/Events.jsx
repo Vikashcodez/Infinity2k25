@@ -24,12 +24,13 @@ const Events = () => {
   const descriptionRef = useRef(null); // Reference for scrolling
 
   // Define positions for visible images
-  const positions = ["left", "center", "right"]; // Only 3 positions
+  const positions = ["left", "center", "right", "back"]; // Only 4 positions
 
   const imageVariants = {
     center: { x: "0%", scale: 0.7, zIndex: 2 },
     left: { x: "-70%", scale: 0.5, zIndex: 1 },
     right: { x: "70%", scale: 0.5, zIndex: 1 },
+    back:{ x:"0%" , scale: 0.7, zIndex:0 }
   };
 
   // Move forward in a circular way

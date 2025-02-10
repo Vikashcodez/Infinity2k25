@@ -9,3 +9,15 @@
 #heading{
     font-size: larger;
 }
+.members{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.member{
+    display: inline-flex;
+    gap: 1rem;
+}
+.button{
+    margin: 1rem;
+}
