@@ -31,19 +31,17 @@ const AboutInfinity = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen mt-0 px-0 py-0">
+    <section ref={containerRef} className="relative py-0 mb-0">
       <div className="container mx-auto px-0 py-0">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left side - 3D Scene */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative aspect-square rounded-lg overflow-hidden">
-              <div ref={sceneRef} className="absolute inset-0">
-                <Suspense fallback={<div className="w-full h-full " />}>
-                  <Canvas>
-                    <Scene />
-                  </Canvas>
-                </Suspense>
-              </div>
+          <div className="w-full lg:w-1/3 h-[500px]"> {/* Fixed height for the 3D scene container */}
+            <div ref={sceneRef} className="relative w-full h-full rounded-lg overflow-hidden">
+              <Suspense fallback={<div className="w-full h-full bg-gray-800" />}>
+                <Canvas>
+                  <Scene />
+                </Canvas>
+              </Suspense>
             </div>
           </div>
 
