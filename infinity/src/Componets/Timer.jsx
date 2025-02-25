@@ -2,21 +2,21 @@ import React, { useState, useEffect } from "react";
 
 const AnimatedCard = ({ animation, digit }) => (
   <div className={`absolute w-full h-full bg-blue-500 rounded-lg ${animation}`}>
-    <div className="relative w-full h-full flex items-center justify-center text-white text-4xl font-bold">
+    <div className="relative w-full h-full flex items-center justify-center text-white text-4xl md:text-6xl font-bold">
       {digit}
     </div>
   </div>
 );
 
 const StaticCard = ({ position, digit }) => (
-  <div className={`absolute w-full h-1/2 ${position} bg-blue-500 flex items-center justify-center text-white text-4xl font-bold rounded-lg`}>
+  <div className={`absolute w-full h-1/2 ${position} bg-blue-500 flex items-center justify-center text-white text-4xl md:text-6xl font-bold rounded-lg`}>
     {digit}
   </div>
 );
 
 const FlipCard = ({ digit, prevDigit }) => {
   return (
-    <div className="relative w-16 h-24">
+    <div className="relative w-12 h-20 md:w-16 md:h-24">
       <StaticCard position="top-0" digit={digit} />
       <StaticCard position="bottom-0" digit={prevDigit} />
       <div className="relative w-full h-full overflow-hidden rounded-lg">
@@ -39,7 +39,7 @@ const CountdownSection = ({ label, value, prevValue }) => {
           <FlipCard key={index} digit={digit} prevDigit={prevDigits[index]} />
         ))}
       </div>
-      <div className="text-gray-500 font-bold text-xl">{label}</div>
+      <div className="text-gray-500 font-bold text-lg md:text-xl">{label}</div>
     </div>
   );
 };
@@ -67,7 +67,7 @@ const CountdownTimer = () => {
       const difference = targetDate - now;
 
       if (difference > 0) {
-        setPrevTimeLeft((prev) => ({ ...prev, ...timeLeft })); // ✅ Correctly update previous time state
+        setPrevTimeLeft((prev) => ({ ...prev, ...timeLeft }));
         setTimeLeft({
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
@@ -79,31 +79,30 @@ const CountdownTimer = () => {
       }
     };
 
-    calculateTimeLeft(); // Initial calculation
+    calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
 
     return () => clearInterval(timer);
-  }, [targetDate]); // ✅ Removed `timeLeft` from dependencies to prevent unnecessary re-renders
+  }, [targetDate]);
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-8">
-      <h1 className="text-3xl font-semibold text-center mb-8 text-white">
+    <div className="w-full max-w-4xl mx-auto p-4 md:p-8">
+      <h1 className="text-2xl md:text-3xl font-semibold text-center mb-6 md:mb-8 text-white">
         INFINITY 2K25 COMING SOON ...
       </h1>
-      <div className="flex justify-center items-center gap-4">
+      <div className="flex flex-wrap justify-center items-center gap-2 md:gap-4">
         <CountdownSection label="DAYS" value={timeLeft.days} prevValue={prevTimeLeft.days} />
-        <div className="text-4xl font-bold text-gray-500">:</div>
+        <div className="text-3xl md:text-4xl font-bold text-gray-500">:</div>
         <CountdownSection label="HOURS" value={timeLeft.hours} prevValue={prevTimeLeft.hours} />
-        <div className="text-4xl font-bold text-gray-500">:</div>
+        <div className="text-3xl md:text-4xl font-bold text-gray-500">:</div>
         <CountdownSection label="MINUTES" value={timeLeft.minutes} prevValue={prevTimeLeft.minutes} />
-        <div className="text-4xl font-bold text-gray-500">:</div>
+        <div className="text-3xl md:text-4xl font-bold text-gray-500">:</div>
         <CountdownSection label="SECONDS" value={timeLeft.seconds} prevValue={prevTimeLeft.seconds} />
       </div>
     </div>
   );
 };
 
-// 🔹 Add these animations to your Tailwind config (tailwind.config.js)
 const styles = {
   theme: {
     extend: {

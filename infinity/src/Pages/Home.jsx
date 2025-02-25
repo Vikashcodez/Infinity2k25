@@ -5,19 +5,21 @@ import Timer from '../Componets/Timer'
 import Tim from '../Componets/Timeline'
 import Faclity from '../Componets/Faclity'
 import Gal from '../Componets/Gallery'
+import ContactPage from '../Componets/Contact'
 
 
 const Home = () => {
   return (
-    <div className="space-y-0">
+    <>
         <Hero  className="mb-0" />
         <About className="mt-0"  />
         <Timer />
         <Tim />
         <Faclity />
         <Gal />
+        <ContactPage />
        
-    </div>
+    </>
   )
 }
 

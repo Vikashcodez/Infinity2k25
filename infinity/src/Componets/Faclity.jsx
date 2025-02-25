@@ -1,18 +1,19 @@
 import React from 'react';
 import hod from '../assets/hod.png'
+import faculity from '../assets/faculty.png'
 const FacultyPage = () => {
   const facultyMembers = [
     {
-      name: "Dr. PV Sudha",
+      name: "Prof. P.V Sudha",
       designation: "Head of the Department",
       expertise: "Professor of Computer Science",
       imageUrl: hod 
     },
     {
       name: "Dr.V.B.Narsimha",
-      designation: "Associate Professor of Data Science",
-      expertise: "Big Data Analytics & Data Mining",
-      imageUrl: "/api/placeholder/400/400"
+      designation: "Associate Professor of Computer  Science",
+      expertise: "Faculty Convenor",
+      imageUrl: faculity
     }
   ];
 

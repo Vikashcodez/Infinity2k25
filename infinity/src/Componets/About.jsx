@@ -31,50 +31,51 @@ const AboutInfinity = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative py-0 mb-0">
-      <div className="container mx-auto px-0 py-0">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Left side - 3D Scene */}
-          <div className="w-full lg:w-1/3 h-[500px]"> {/* Fixed height for the 3D scene container */}
-            <div ref={sceneRef} className="relative w-full h-full rounded-lg overflow-hidden">
-              <Suspense fallback={<div className="w-full h-full bg-gray-800" />}>
-                <Canvas>
-                  <Scene />
-                </Canvas>
-              </Suspense>
-            </div>
+    <section ref={containerRef} className="relative py-10 px-4 md:px-0">
+      <div className="container mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            <span className="text-gray-300">ABOUT</span>{" "}
+            <span className="bg-gradient-to-r from-green-400 to-green-500 text-transparent bg-clip-text">
+              INFINITY
+            </span>
+          </h2>
+        </div>
+
+        {/* 3D Scene */}
+        <div className="w-full h-[350px] md:h-[500px] mb-6 md:mb-0">
+          <div ref={sceneRef} className="relative w-full h-full rounded-lg overflow-hidden">
+            <Suspense fallback={<div className="w-full h-full bg-gray-800" />}>
+              <Canvas>
+                <Scene />
+              </Canvas>
+            </Suspense>
           </div>
+        </div>
 
-          {/* Right side - Content */}
-          <div className="w-full lg:w-1/2 text-white">
-            <h2 className="text-5xl font-bold mb-8">
-              <span className="text-gray-300">ABOUT</span>{" "}
-              <span className="bg-gradient-to-r from-green-400 to-green-500 text-transparent bg-clip-text">
-                INFINITY
-              </span>
-            </h2>
+        {/* Description & Event Details */}
+        <div className="text-white text-center md:text-left max-w-3xl mx-auto">
+          <p className="text-lg leading-relaxed mb-4">
+            The National level technical symposium organized by University College of Engineering 
+            is here to awestruck all of you with its combined aura of technical and cultural 
+            infused into her heart. That's gonna leave you with an exhilarating experience.
+          </p>
 
-            <p className="text-lg leading-relaxed mb-6">
-              The National level technical symposium organized by University College of Engineering 
-              is here to awestruck all of you with its combined aura of technical and cultural 
-              infused into her heart. That's gonna leave you with an exhilarating experience.
-            </p>
+          <p className="text-lg leading-relaxed mb-6">
+            So, eager to tear the pages of the calendar that pause at 21st and 22nd of March? 
+            Come on, let's swim in the grandeur tour of this wonderful fest.
+          </p>
 
-            <p className="text-lg leading-relaxed mb-8">
-              So, Eager to tear the pages of the calendar that pause at 22nd and 23rd of March. 
-              Come on, Let's swim in the grandeur tour of this wonderful fest.
-            </p>
-
-            {/* Event details cards */}
-            <div className="flex flex-wrap gap-4">
-              <div className="bg-white/10 px-6 py-3 rounded-lg">
-                <span className="block text-sm text-gray-300">Date</span>
-                <span className="block text-xl font-semibold">March 21-22, 2025</span>
-              </div>
-              <div className="bg-white/10 px-6 py-3 rounded-lg">
-                <span className="block text-sm text-gray-300">Venue</span>
-                <span className="block text-xl font-semibold">UCE Campus</span>
-              </div>
+          {/* Event Details Cards */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-4">
+            <div className="bg-white/10 px-6 py-3 rounded-lg">
+              <span className="block text-sm text-gray-300">Date</span>
+              <span className="block text-xl font-semibold">March 21-22, 2025</span>
+            </div>
+            <div className="bg-white/10 px-6 py-3 rounded-lg">
+              <span className="block text-sm text-gray-300">Venue</span>
+              <span className="block text-xl font-semibold">UCE Campus</span>
             </div>
           </div>
         </div>

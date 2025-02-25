@@ -1,5 +1,15 @@
 import React, { useState } from "react";
 import { X, Calendar, DollarSign, Book, Users } from "lucide-react";
+import infy from '../assets/Events/infy.png'
+import techtac from '../assets/Events/3.png'
+import technothr from '../assets/Events/5.png'
+import puzzle from '../assets/Events/10.png'
+import dsa from '../assets/Events/8.png'
+import escape from '../assets/Events/2.png'
+import aipct from '../assets/Events/7.png'
+import techtrai from '../assets/Events/9.png'
+import decrpt from '../assets/Events/4.png'
+import drama from '../assets/Events/6.png'
 
 const EventCard = ({ event, onClick, index }) => {
   const isLeft = index % 2 === 0;
@@ -166,128 +176,129 @@ const EventPage = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  
   const events = [
     {
       id: 1,
-      name: "Event1",
+      name: "InfyHunt",
       date: "March 21, 2025",
-      fee: "$20",
+      fee: "Rs 250 per team",
       capacity: 100,
       type: "Competition",
-      description: "Join us for an exciting 24-hour coding challenge where you'll build innovative solutions!",
+      description: "Infy Hunt is an exciting, clue-based scavenger challenge that tests problem-solving, teamwork, and quick decision-making. Teams must navigate through various departments by solving puzzles, locating hidden envelopes, and racing against time to complete the hunt. The fastest team to finish wins! Event Structure: Round 1 - Treasure Hunt Teams receive an initial clue that leads them to a specific department. Upon arrival, they must solve a question to discover the location of a hidden envelope. The envelope contains the key to their next destination. This continues until the team finds the final envelope. The team that completes the hunt in the shortest time wins. Bonus Round - The Time Advantage Teams can participate in an optional bonus challenge to reduce their total completion time. They can choose questions from three difficulty levels: Easy, Medium, and Hard. Successfully solving these questions grants a time deduction, with harder questions offering a greater reduction. This gives teams a strategic advantage over their competitors. The team that completes the hunt with the shortest adjusted time emerges as the winner!",
       rules: ["Max team size: 4", "No external libraries allowed"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/hackathon-registration"
+      image: infy,
+      registrationLink: "/infyhunt"
     },
     {
       id: 2,
-      name: "Event2",
+      name: "Tech Tac Toe",
       date: "March 15, 2025",
-      fee: "Free",
+      fee: "Rs 150 per team",
       capacity: 50,
       type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
+      description: "ROUND 1: Tic Tac Toe meets quiz! With very basic Questions. Mark ❌ or ⭕ only when you answer the quiz question correctly! ✔\nROUND 2: Snake and Ladder 🐍🪜 infused with tech quizzes! Answer questions, roll the dice 🎲 🍀, climb ladders 🪜, but watch out for snakes 🐍!",
       rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
+      image: techtac,
+      registrationLink: "/tech-tac-toe"
     },
     {
-      id: 3,
-      name: "Event3",
-      date: "March 15, 2025",
-      fee: "Free",
-      capacity: 50,
-      type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
+      "id": 3,
+      "name": "Techno Throne",
+      "date": "March 15, 2025",
+      "fee": "Rs 150",
+      "capacity": 50,
+      "type": "Competition",
+      "description": "Technothrone: The Ultimate High-Stakes Quiz\n\nTechnothrone isn’t just another quiz—it’s a battle of strategy, risk, and knowledge!\n\nAt the start, each player is given a fixed amount of points or coins. With every round, you’ll face a multiple-choice question. But here’s the twist: you must bet your points on the answer you believe is correct!\n\n✅ Guess right? You win all the points wagered by others.\n❌ Guess wrong? You lose your bid.\n\nIf there are multiple winners, the highest bidder takes it all.\n\nAfter a series of intense rounds, the player with the most points remaining claims the throne as the ultimate champion.\n\nDo you have the knowledge, the nerve, and the strategy to conquer Technothrone? Place your bets and find out!",
+      "rules": ["Bring a laptop", "Basic Python knowledge recommended"],
+      "image": technothr,
+      "registrationLink": "/techno"
     },
     {
       id: 4,
-      name: "Event4",
+      name: "Puzzle Bit",
       date: "March 15, 2025",
-      fee: "Free",
+      fee: "Rs 150 per team",
       capacity: 50,
       type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
+      description: "Puzzle Bit is an exciting, fast-paced challenge that tests your logic, coding, and puzzle-solving skills. In Round 1, teams will tackle a mix of emojis, tech riddles, programming trivia, and puzzles, racing against time to earn points. In Round 2, they will decode technical clues to solve the Ultimate Tech Crossword, where speed is key-the fastest teams to finish will claim victory!",
+      rules: ["Team size: 2 members"],
+      image: puzzle,
+      registrationLink: "/puzzlebit"
     },
     {
       id: 5,
-      name: "Event5",
+      name: "Dsa Flag",
       date: "March 15, 2025",
-      fee: "Free",
+      fee: "Rs 150 per Team",
       capacity: 50,
       type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
+      description: "A thrilling coding contest where participants solve DSA-based challenges. Show off your problem-solving skills and climb the leaderboard!",
+      rules: ["Bring a laptop", "Basic DSA knowledge required"],
+      image: dsa,
+      registrationLink: "/dsa-flag"
     },
     {
       id: 6,
-      name: "Event6",
+      name: "Escape Room",
       date: "March 15, 2025",
-      fee: "Free",
+      fee: "Rs 75 Per team",
       capacity: 50,
       type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
+      description: "A notorious hacker has been found dead—right after uncovering a dark secret that someone wanted buried forever. Was it revenge? A cover-up? Or something far more sinister? As elite investigators, your mission is twofold: unravel the mystery and escape before time runs out. You have 20 minutes to examine clues, decode messages, and uncover the killer’s identity. 4 suspects. 1 murderer. Can you crack the case before it's too late? Or will the truth remain hidden in the shadows? ",
+      rules: ["Team size: 1-4 members", "Time limit: 20 minutes"],
+      image: escape,
+      registrationLink: "/escape-room"
     },
     {
       id: 7,
-      name: "Event7",
+      name: "AI Pictionary",
       date: "March 15, 2025",
-      fee: "Free",
+      fee: "RS 150 Per team",
       capacity: 50,
       type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
+      description: "Guess the tech term using AI-generated drawings! A fun and fast-paced competition where creativity meets technology. ",
+      rules: ["Bring a laptop","1st prize-1000","2nd prize-600","3rd prize-400"],
+      image: aipct,
+      registrationLink: "/ai-pict"
     },
     {
       id: 8,
-      name: "Event8",
+      name: "Tech Triathlon",
       date: "March 15, 2025",
       fee: "Free",
       capacity: 50,
       type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
+      description: "No coding skills required Event Rounds: 1. Generate & Represent: Utilize a Gen AI tool to create team images and names reflecting your tech prowess. Unleash your creativity! 2. AI Quiz Challenge: Test your knowledge with a challenging quiz covering various aspects of Generative AI. Explore prompts, models, and advancements in the field. 3. Prompt Engineering Showcase: This round tests your prompt engineering skills.You will be given a set of requirements for which you should design a web page using an ai model like Chat-Gpt.",
+      rules: ["Bring a laptop"],
+      image: techtrai,
+      registrationLink: "/tech-trai"
     },
     {
       id: 9,
-      name: "Event9",
+      name: "Decryptors Assemble",
       date: "March 15, 2025",
-      fee: "Free",
+      fee: "Rs 150 per team",
       capacity: 50,
       type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
+      description: "A thrilling cybersecurity and cryptography challenge! Decrypt hidden messages, crack codes, and prove your hacking skills!",
+      rules: ["Bring a laptop"],
+      image: decrpt,
+      registrationLink: "/Decrpt"
     },
     {
       id: 10,
-      name: "Event10",
+      name: "Drama Tech",
       date: "March 15, 2025",
-      fee: "Free",
+      fee: "Rs 150 per team",
       capacity: 50,
       type: "Competition",
-      description: "Learn the fundamentals of AI with industry experts in this hands-on workshop.",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
-      image: "/api/placeholder/800/600",
-      registrationLink: "https://example.com/ai-workshop-registration"
-    },
-  ];
+      description: "🔹 \"Act it, guess it, and tech your way to victory!\" 🎬💻Do you have what it takes to blend drama with technology? DramaTech is a one-of-a-kind challenge where creativity meets technical knowledge! Bring out your inner performer and race against time to guess tech terms through expressive enacting. 🏆 How It Works: 🔥 Round 1 - Tech Charades 🎭 👉 One team member will act out specific technical phrases (like from DSA, Java, C, etc) using gestures, expressions, and creativity—no words spelling or writing allowed! 👉 Here is the twist you will be given question, first you need to find answer and then enact it. 👉 The other teammate must guess the correct word based on the performance.👉 If stuck, a clue will be provided, but use it wisely! 👉 Teams that successfully guess all the given words qualify for the next round. 💡 Think fast, act smart, and bring your tech knowledge to life! ⚡ Round 2 - Rapid Fire Showdown ⏳ 🚀 The pressure is on! In this final round: ✅ Teams will have a limited time to guess as many technical phrases (like from DSA, Java, C, etc) as possible. ✅ Just pure quick acting and rapid guessing! you will be given the phrase directly. ✅ The team with the most correct guesses within the time limit will be crowned the DramaTech Champions! 🏆 💡 \"Master the art of expression, decode the clues, and claim the victory!\" 🎭💻🚀 Are you ready to put your acting, logic, and tech knowledge to the test? Sign up now and tech it to the top! 🔥💡🎬",
+      rules: ["Team size: 2 members"],
+      image: drama,
+      registrationLink: "/Drama-tech"
+    }
+];
   
 
   return (
