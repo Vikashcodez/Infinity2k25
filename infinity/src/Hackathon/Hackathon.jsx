@@ -11,9 +11,9 @@ const Hackathon = () => {
   return (
     <>
     <Banner />
-    
-    <Desc />
     <ProblemStatements />
+    <Desc />
+    
     <Timeline />
     <Prizes />
     

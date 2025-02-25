@@ -1,22 +1,22 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import img1 from '../assets/Gallery/img1.jpg';
-import img2 from '../assets/Gallery/img2.jpg';
-import img3 from '../assets/Gallery/img3.jpg';
-import img4 from '../assets/Gallery/img4.jpg';
-import img5 from '../assets/Gallery/img5.jpg';
-import img6 from '../assets/Gallery/img6.jpg';
+import img1 from '../assets/Gallery/img1.JPG';
+import img2 from '../assets/Gallery/img2.JPG';
+import img3 from '../assets/Gallery/img3.JPG';
+import img4 from '../assets/Gallery/img4.JPG';
+import img5 from '../assets/Gallery/img5.JPG';
+import img6 from '../assets/Gallery/img6.JPG';
 import img7 from '../assets/Gallery/img39.jpeg';
 import img8 from '../assets/Gallery/img38.jpeg';
 import img9 from '../assets/Gallery/img37.jpeg';
 import img10 from '../assets/Gallery/img35.jpeg';
-import img11 from '../assets/Gallery/img16.jpg';
-import img12 from '../assets/Gallery/img17.jpg';
-import img13 from '../assets/Gallery/img18.jpg';
-import img14 from '../assets/Gallery/img19.jpg';
-import img15 from '../assets/Gallery/img20.jpg';
-import img16 from '../assets/Gallery/img21.jpg';
-import img17 from '../assets/Gallery/img22.jpg';
+import img11 from '../assets/Gallery/img16.JPG';
+import img12 from '../assets/Gallery/img17.JPG';
+import img13 from '../assets/Gallery/img18.JPG';
+import img14 from '../assets/Gallery/img19.JPG';
+import img15 from '../assets/Gallery/img20.JPG';
+import img16 from '../assets/Gallery/img21.JPG';
+import img17 from '../assets/Gallery/img22.JPG';
 
 const CurvedGallerySlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);

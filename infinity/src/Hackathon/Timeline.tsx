@@ -25,24 +25,60 @@ const Timeline = () => {
 
   const events = [
     { 
-      date: 'Feb 21, 2025', 
-      event: 'Registration Opens',
-      description: 'Sign up to participate in the hackathon and start forming your team.'
+      date: 'Feb 26, 2025', 
+      event: 'Round 1: Idea Submission Begins',
+      description: 'Submit a 1-2 slide PPT explaining your idea, including its purpose, functionality, and potential impact.',
+      badge: 'Round 1',
+      period: 'Feb 26 - Mar 08, 2025'
     },
     { 
-      date: 'Mar 15, 2025', 
-      event: 'Submission Deadline',
-      description: 'Last day to register and submit your project proposal.'
+      date: 'Mar 08, 2025', 
+      event: 'Round 1 Submission Deadline',
+      description: 'Last day to submit your project proposal. Only the most promising ideas will move forward!',
+      badge: 'Round 1',
+      period: 'Feb 26 - Mar 08, 2025'
     },
     { 
-      date: 'Mar 21, 2025', 
-      event: 'Hackathon Begins',
-      description: '6 hours of intense coding, innovation, and problem-solving.'
+      date: 'Mar 10, 2025', 
+      event: 'Round 1 Results Announced',
+      description: 'Selected teams will be notified to proceed to the prototype development phase.',
+      badge: 'Results',
+      period: 'Mar 10, 2025'
     },
     { 
-      date: 'Mar 22, 2025', 
-      event: 'Winners Announced',
-      description: 'Celebration and awards ceremony for the top projects.'
+      date: 'Mar 11, 2025',   
+      event: 'Round 2: Prototype Development Begins',
+      description: 'Develop a working prototype showcasing your idea\'s key features and real-world impact.',
+      badge: 'Round 2',
+      period: 'Mar 11 - Mar 17, 2025'
+    },
+    { 
+      date: 'Mar 17, 2025',   
+      event: 'Round 2 Submission Deadline',
+      description: 'Submit a video demo of your working prototype by the end of the day.',
+      badge: 'Round 2',
+      period: 'Mar 11 - Mar 17, 2025'
+    },
+    { 
+      date: 'Mar 19, 2025',   
+      event: 'Round 2 Results Announced',
+      description: 'Top 30 teams will be selected to present at the Grand Finale.',
+      badge: 'Results',
+      period: 'Mar 19, 2025'
+    },
+    { 
+      date: 'Mar 21, 2025',   
+      event: 'Round 3: Grand Finale - Day 1',
+      description: 'Live presentations begin in front of an expert panel. Cover your problem statement, solution approach, and technical implementation.',
+      badge: 'Finals',
+      period: 'Mar 21 - Mar 22, 2025'
+    },
+    { 
+      date: 'Mar 22, 2025',   
+      event: 'Round 3: Grand Finale - Day 2 & Winners Announced',
+      description: 'Final presentations conclude and winners are announced at the closing ceremony.',
+      badge: 'Finals',
+      period: 'Mar 21 - Mar 22, 2025'
     },
   ];
 
@@ -61,11 +97,30 @@ const Timeline = () => {
     };
   });
 
+  const getBadgeColor = (badge) => {
+    switch(badge) {
+      case 'Round 1':
+        return 'from-blue-600 to-cyan-500';
+      case 'Round 2':
+        return 'from-purple-600 to-pink-500';
+      case 'Results':
+        return 'from-amber-500 to-yellow-400';
+      case 'Finals':
+        return 'from-red-500 to-rose-600';
+      default:
+        return 'from-gray-600 to-gray-500';
+    }
+  };
+
   return (
     <section id="timeline" className="py-20  text-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">Event Timeline</h2>
-        <p className="text-gray-300 text-center mb-16 max-w-2xl mx-auto">Track our journey from registration to the grand finale</p>
+        <h2 className="text-5xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+          Hackathon Timeline
+        </h2>
+        <p className="text-gray-300 text-center mb-16 max-w-2xl mx-auto">
+          Track the journey from idea submission to grand finale
+        </p>
         
         <div className="relative">
           {/* Vertical line */}
@@ -83,14 +138,21 @@ const Timeline = () => {
                 {/* Date circle */}
                 <div className="md:w-1/2 flex flex-col items-center md:items-end pb-8 md:pb-0 md:pr-8">
                   <motion.div
-                    className={`relative z-10 p-4 rounded-xl shadow-lg w-48 text-center border-2 ${
-                      event.isLive ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-300' : 
-                      event.isPast ? 'bg-gray-800 border-gray-700' : 'bg-black border-gray-700'
+                    className={`relative z-10 p-4 rounded-xl shadow-lg w-56 text-center ${
+                      event.isLive 
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-2 border-blue-300' 
+                        : event.isPast 
+                          ? 'bg-gray-800/90 border border-gray-700' 
+                          : 'bg-black/90 border border-gray-700'
                     }`}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <p className="font-bold text-lg">{event.date}</p>
+                    <div className={`text-xs font-semibold mb-1 py-1 px-2 rounded-full inline-block bg-gradient-to-r ${getBadgeColor(event.badge)} text-white`}>
+                      {event.badge}
+                    </div>
+                    <p className="font-bold text-lg mb-1">{event.date}</p>
+                    <p className="text-xs text-gray-400">{event.period}</p>
                     {event.isLive && (
                       <div className="absolute -top-2 -right-2 flex items-center justify-center">
                         <span className="relative flex h-4 w-4">
@@ -109,9 +171,12 @@ const Timeline = () => {
                 {/* Event content */}
                 <div className="md:w-1/2 flex flex-col items-center md:items-start md:pl-8">
                   <motion.div
-                    className={`w-full max-w-md p-6 rounded-xl shadow-lg ${
-                      event.isLive ? 'bg-gradient-to-r from-blue-900/80 to-purple-900/80' : 
-                      event.isPast ? 'bg-gray-800/80' : 'bg-black/80'
+                    className={`w-full max-w-md p-6 rounded-xl shadow-xl backdrop-blur-sm ${
+                      event.isLive 
+                        ? 'bg-gradient-to-r from-blue-900/80 to-purple-900/80 border border-blue-600/50' 
+                        : event.isPast 
+                          ? 'bg-gray-800/80 border border-gray-700/50' 
+                          : 'bg-gray-900/80 border border-gray-800/50'
                     }`}
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
@@ -140,9 +205,19 @@ const Timeline = () => {
                         Completed
                       </div>
                     ) : event.isLive ? (
-                      <div className="mt-4 text-blue-300 text-sm font-semibold">In progress</div>
+                      <div className="mt-4 text-blue-300 text-sm font-semibold flex items-center">
+                        <svg className="w-4 h-4 mr-1 animate-pulse" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
+                        </svg>
+                        In progress
+                      </div>
                     ) : (
-                      <div className="mt-4 text-gray-400 text-sm">Coming soon</div>
+                      <div className="mt-4 text-gray-400 text-sm flex items-center">
+                        <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
+                        </svg>
+                        Coming soon
+                      </div>
                     )}
                   </motion.div>
                 </div>

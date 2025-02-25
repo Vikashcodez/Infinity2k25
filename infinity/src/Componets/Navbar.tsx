@@ -1,23 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/infinity-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("userToken"));
   const navigate = useNavigate();
-
-  // Listen for localStorage changes (login/logout)
-  useEffect(() => {
-    const handleAuthChange = () => {
-      setIsLoggedIn(!!localStorage.getItem("userToken"));
-    };
-
-    window.addEventListener("authChange", handleAuthChange);
-    return () => {
-      window.removeEventListener("authChange", handleAuthChange);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -25,23 +12,6 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem("userToken");
-    localStorage.removeItem("userName");
-    localStorage.removeItem("isAdmin");
-    setIsLoggedIn(false);
-    window.dispatchEvent(new Event("authChange")); // Notify Navbar to update UI
-    navigate("/login");
-  };
-
-  const handleAuth = () => {
-    if (isLoggedIn) {
-      handleLogout();
-    } else {
-      navigate("/login");
-    }
   };
 
   return (
@@ -55,14 +25,10 @@ const Navbar = () => {
         {/* Auth Button & Hamburger */}
         <div className="flex items-center md:order-2">
           <button
-            onClick={handleAuth}
-            className={`px-6 py-2 text-sm font-medium text-white rounded-full transition-colors duration-200 ease-in-out mr-4 md:mr-0 ${
-              isLoggedIn
-                ? "bg-red-600 hover:bg-red-700"
-                : "bg-blue-600 hover:bg-blue-700"
-            }`}
+            onClick={() => navigate("/login")}
+            className="px-6 py-2 text-sm font-medium text-white rounded-full transition-colors duration-200 ease-in-out mr-4 md:mr-0 bg-blue-600 hover:bg-blue-700"
           >
-            {isLoggedIn ? "Logout" : "Login"}
+            Login
           </button>
 
           {/* Hamburger Menu */}
@@ -99,7 +65,7 @@ const Navbar = () => {
               { path: "/hack", label: "Hackathon" },
               { path: "/events", label: "Events" },
               { path: "/gallery", label: "Gallery" },
-              { path: "/workshop", label: "Live Event" },
+              { path: "/workshop", label: "Workshop" },
               { path: "/sponsors", label: "Sponsors" },
               { path: "/our-team", label: "Our Team" },
             ].map((item) => (

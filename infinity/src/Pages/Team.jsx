@@ -5,7 +5,7 @@ import conv from '../assets/Team/conv.jpeg'
 import abhi from '../assets/Team/Abhi.png'
 import nar from '../assets/Team/Nar.jpeg'
 import mani from '../assets/Team/Mani.jpeg'
-import siddha from '../assets/Team/sidda.jpeg'
+import siddha from '../assets/Team/Sidda.jpeg'
 import rohit from '../assets/Team/rohit.jpeg'
 import mee from '../assets/Team/mee.jpeg'
 import jointsec from '../assets/Team/jointsec.jpeg'
@@ -54,6 +54,7 @@ import atiq from '../assets/Team/atiq.jpeg'
 import srija from '../assets/Team/srija.jpg'
 import prathyusha from '../assets/Team/prathyusha.jpg'
 import vaishnavi from '../assets/Team/vaishnavi.jpeg'
+import cvardhan from '../assets/Team/cvardhan.jpeg'
 const TeamPage = () => {
   const teams = [
     {
@@ -79,7 +80,7 @@ const TeamPage = () => {
         { name: "Abhinav", designation: "Co-Convener", photo: Abhinav, linkedin: "https://linkedin.com/in/mike-wilson" },
         { name: "Navitha", designation: "Co-Convener", photo: navitha, linkedin: "https://linkedin.com/in/emma-davis" },
         { name: "Seshu", designation: "Co-Convener", photo: seshu, linkedin: "https://linkedin.com/in/chris-brown" },
-        { name: "Sai Vardhan", designation: "Co-Convener", photo: "/api/placeholder/400/400", linkedin: "https://linkedin.com/in/chris-brown" },
+        { name: "Sai Vardhan", designation: "Co-Convener", photo: cvardhan, linkedin: "https://linkedin.com/in/chris-brown" },
         { name: "Shravan", designation: "Co-Convener", photo: shravan, linkedin: "https://www.linkedin.com/in/shravanbandi159?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
         { name: "Yogeshwar", designation: "Co-Convener", photo: yogesh, linkedin: "https://linkedin.com/in/chris-brown" }
       ]

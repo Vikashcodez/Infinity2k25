@@ -21,7 +21,7 @@ const Footer: FC = () => {
               {/* Name */}
               <div className="text-xl font-bold mb-2 pb-5">&copy; INFINITY 2K25</div>
               {/* Additional Text */}
-              <p className="text-gray-400">Department of Computer Science and Engineering, University College of Engineering, Osmania University.<p>ADMIN Login</p></p>
+              <p className="text-gray-400">Department of Computer Science and Engineering, University College of Engineering, Osmania University.</p>
             </div>
             {/* Second column */}
             <div className="text-white flex justify-center items-center pr-10 lg:justify-end">

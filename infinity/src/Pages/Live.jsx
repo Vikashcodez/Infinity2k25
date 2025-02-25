@@ -45,27 +45,7 @@ const EventShowcase = () => {
         'Complete pre-workshop assignments'
       ]
     },
-    {
-      id: 3,
-      type: 'hackathon',
-      name: 'CodeFusion Hackathon',
-      shortDesc: '48-hour coding challenge',
-      fullDesc: 'A 48-hour hackathon challenging participants to build innovative solutions for real-world problems. Multiple tracks available including Web3, AI/ML, and Mobile Development.',
-      image: '/api/placeholder/400/250',
-      date: 'April 5-7, 2025',
-      teamSize: '3-4',
-      registrationFee: '$100',
-      registrationLink: 'https://codefusion.dev/register',
-      seats: 200,
-      venue: 'Grand Convention Center',
-      rules: [
-        'Original work only',
-        'All code must be written during hackathon',
-        'Regular commits required',
-        'Demo presentation mandatory',
-        'Follow code of conduct'
-      ]
-    }
+   
   ];
 
   const handleBackdropClick = (e) => {

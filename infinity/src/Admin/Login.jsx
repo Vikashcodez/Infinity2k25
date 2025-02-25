@@ -23,7 +23,7 @@ const Login = () => {
         console.log("Logging in with:", username, password);
 
         // ✅ Admin Login
-        if (username === "admin" && password === "123") {
+        if (username === "Infy@2k25Admin" && password === "OUCSE@2k25INFY") {
             localStorage.setItem("isAdmin", "true");
             localStorage.setItem("userName", "Admin");
             localStorage.setItem("userToken", "admin_token"); // Store token
@@ -33,7 +33,7 @@ const Login = () => {
         }
 
         // ✅ Hack4Good User Login
-        if (username === "hack4good" && password === "123") {
+        if (username === "Infy@2k25Hack4Good" && password === "Hack@2k25") {
             localStorage.setItem("isAdmin", "false");
             localStorage.setItem("userName", "Hack4Good");
             localStorage.setItem("userToken", "hack_token"); // Store token
@@ -43,7 +43,7 @@ const Login = () => {
         }
 
         // ✅ Tech User Login
-        if (username === "tech" && password === "123") {
+        if (username === "Infy@2k25Tech" && password === "Tech@2k25UCEOU") {
             localStorage.setItem("isAdmin", "false");
             localStorage.setItem("userName", "Tech");
             localStorage.setItem("userToken", "tech_token"); // Store token
