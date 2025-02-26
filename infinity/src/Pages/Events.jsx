@@ -182,7 +182,7 @@ const EventPage = () => {
       id: 1,
       name: "InfyHunt",
       date: "March 21, 2025",
-      fee: "Rs 250 per team",
+      fee: "Rs 350 per team",
       capacity: 100,
       type: "Competition",
       description: "Infy Hunt is an exciting, clue-based scavenger challenge that tests problem-solving, teamwork, and quick decision-making. Teams must navigate through various departments by solving puzzles, locating hidden envelopes, and racing against time to complete the hunt. The fastest team to finish wins! Event Structure: Round 1 - Treasure Hunt Teams receive an initial clue that leads them to a specific department. Upon arrival, they must solve a question to discover the location of a hidden envelope. The envelope contains the key to their next destination. This continues until the team finds the final envelope. The team that completes the hunt in the shortest time wins. Bonus Round - The Time Advantage Teams can participate in an optional bonus challenge to reduce their total completion time. They can choose questions from three difficulty levels: Easy, Medium, and Hard. Successfully solving these questions grants a time deduction, with harder questions offering a greater reduction. This gives teams a strategic advantage over their competitors. The team that completes the hunt with the shortest adjusted time emerges as the winner!",
@@ -198,7 +198,7 @@ const EventPage = () => {
       capacity: 50,
       type: "Competition",
       description: "ROUND 1: Tic Tac Toe meets quiz! With very basic Questions. Mark ❌ or ⭕ only when you answer the quiz question correctly! ✔\nROUND 2: Snake and Ladder 🐍🪜 infused with tech quizzes! Answer questions, roll the dice 🎲 🍀, climb ladders 🪜, but watch out for snakes 🐍!",
-      rules: ["Bring a laptop", "Basic Python knowledge recommended"],
+      rules: ["Basic Python knowledge recommended"],
       image: techtac,
       registrationLink: "/tech-tac-toe"
     },
@@ -281,8 +281,14 @@ const EventPage = () => {
       fee: "Rs 150 per team",
       capacity: 50,
       type: "Competition",
-      description: "A thrilling cybersecurity and cryptography challenge! Decrypt hidden messages, crack codes, and prove your hacking skills!",
-      rules: ["Bring a laptop"],
+      description: [
+        "A thrilling cybersecurity and cryptography challenge! Decrypt hidden messages, crack codes, and prove your hacking skills!",
+        
+        "A fast-paced, relay-style logic and cryptography challenge where teams solve interlinked puzzles.",
+        "Each player's solution unlocks the next step, leading to a final decryption battle.",
+       
+      ],
+      rules: ["Game Structure:","Player 1 – Decoding Challenge:","Solves a coding problem (e.g., finding output, debugging).","The output determines the question number for Player 2.","Player 2 – Decoding Challenge:","Solves the indicated problem.","The output acts as a key to decrypt a cipher text in the final challenge.","Final Step –","Team Cryptography Challenge:","Both players use the key from Step 2 to decrypt and solve the final challenge together.","The team that takes the minimum time to solve it wins!"],
       image: decrpt,
       registrationLink: "/Decrpt"
     },

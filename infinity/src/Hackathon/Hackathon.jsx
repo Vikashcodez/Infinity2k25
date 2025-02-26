@@ -12,10 +12,10 @@ const Hackathon = () => {
     <>
     <Banner />
     <ProblemStatements />
-    <Desc />
+   
     
     <Timeline />
-    <Prizes />
+  
     
     </>
   )

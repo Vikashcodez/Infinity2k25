@@ -330,6 +330,7 @@ const Register = () => {
                                         onChange={handleImageChange} 
                                         required 
                                     />
+                                    <Label htmlFor="uploadImage"><p className='text-white'>Note: Image size should below 900KB</p></Label>
                                 </div>
 
                                 <div className="flex flex-col items-center space-y-4 p-6 bg-gray-50 rounded-lg">
@@ -339,6 +340,7 @@ const Register = () => {
                                         alt="Payment QR Code"
                                         className="w-64 h-64 border-2 border-gray-300 rounded-lg"
                                     />
+
                                     <p className="text-sm text-gray-600">Scan QR code to complete payment</p>
                                 </div>
                             </div>

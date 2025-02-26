@@ -29,8 +29,8 @@ const CardContent = ({ className = "", children, ...props }) => (
 // Main Event Tracking Component
 const EventTracking = () => {
   const events = [
-    { id: 1, name: "Brochure Launch", date: "2025-02-20", time: "15:00", location: "Conference Hall CSE Dept" },
-    { id: 2, name: "WorkShop", date: "2025-02-25", time: "10:00", location: "Conference Hall CSE Dept" },
+    { id: 1, name: "Brochure Launch", date: "2025-02-22", time: "15:00", location: "Conference Hall CSE Dept" },
+    { id: 2, name: "WorkShop", date: "2025-03-14", time: "10:00", location: "Conference Hall CSE Dept" },
     { id: 3, name: "FlashMob", date: "2025-03-20", time: "14:00", location: "Arts College" },
     { id: 4, name: "Opening Ceremony", date: "2025-03-22", time: "09:00", location: "Conference Hall CSE Dept" },
     { id: 5, name: "Technical Events", date: "2025-03-22", time: "11:00", location: "Conference Hall CSE Dept" }
@@ -51,34 +51,30 @@ const EventTracking = () => {
   const upcomingEvent = getNextUpcomingEvent();
 
   return (
-    <div className="min-h-screen p-4 md:p-8 bg-gray-900">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen p-4 md:p-8 ">
+      <div className="max-w-4xl mx-auto">
         {/* Header Section */}
-        <div className="mb-6 text-center md:text-left">
-          <h1 className="text-2xl md:text-3xl font-bold text-white">Event Timeline</h1>
+        <div className="mb-6 text-center">
+          <h1 className="text-2xl md:text-4xl font-bold text-white mb-2">Event Timeline</h1>
           <p className="text-gray-200 text-sm md:text-base">Track your upcoming and past events</p>
         </div>
 
         {/* Next Upcoming Event Card */}
-        <Card className="mb-6 md:mb-8 transform hover:scale-[1.02] transition-transform duration-300 bg-gradient-to-br from-blue-50 to-white">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <AlertCircle className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
+        <Card className="mb-8 transform hover:scale-[1.02] transition-transform duration-300 bg-gradient-to-br from-blue-50 to-white">
+          <CardHeader className="border-b border-gray-100">
+            <CardTitle className="flex items-center gap-2 text-blue-600">
+              <AlertCircle className="w-5 h-5 md:w-6 md:h-6" />
               Next Upcoming Event
             </CardTitle>
           </CardHeader>
           <CardContent>
             {upcomingEvent ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <div className="space-y-4">
-                  <h2 className="text-lg md:text-2xl font-bold text-gray-900">{upcomingEvent.name}</h2>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <MapPin className="w-4 h-4 md:w-5 md:h-5 text-gray-500" />
-                    <span className="text-sm md:text-base">{upcomingEvent.location}</span>
-                  </div>
-                  <div className="space-y-2">
+              <div className="space-y-4">
+                <h2 className="text-xl md:text-3xl font-bold text-gray-900">{upcomingEvent.name}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
+                      <Calendar className="w-5 h-5 text-blue-600" />
                       <span className="text-sm md:text-base">
                         {new Date(upcomingEvent.date).toLocaleDateString('en-US', { 
                           weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
@@ -86,12 +82,21 @@ const EventTracking = () => {
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Clock className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
+                      <Clock className="w-5 h-5 text-blue-600" />
                       <span className="text-sm md:text-base">
                         {new Date(`2000-01-01T${upcomingEvent.time}`).toLocaleTimeString('en-US', {
                           hour: 'numeric', minute: 'numeric'
                         })}
                       </span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <MapPin className="w-5 h-5 text-gray-500" />
+                      <span className="text-sm md:text-base">{upcomingEvent.location}</span>
+                    </div>
+                  </div>
+                  <div className="hidden md:flex items-center justify-center">
+                    <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center">
+                      <AlertCircle className="w-12 h-12 text-blue-600" />
                     </div>
                   </div>
                 </div>
@@ -104,38 +109,57 @@ const EventTracking = () => {
           </CardContent>
         </Card>
 
-        {/* Timeline Section */}
-        <Card className="transform hover:scale-[1.02] transition-transform duration-300 overflow-x-auto">
-          <CardHeader>
+        {/* Vertical Timeline Section */}
+        <Card className="transform hover:scale-[1.02] transition-transform duration-300">
+          <CardHeader className="border-b border-gray-100">
             <CardTitle>Events Timeline</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex md:flex-wrap min-w-max md:min-w-full overflow-x-auto space-x-6 md:space-x-0 px-4">
-              {events.map((event, index) => (
-                <div key={event.id} className="relative flex flex-col items-center w-40 md:w-64 text-center">
-                  {/* Connector Line */}
-                  {index !== events.length - 1 && (
-                    <div className="absolute hidden md:block w-full h-0.5 bg-gray-200 top-6 left-1/2 -z-10" />
-                  )}
+            <div className="relative">
+              {/* Vertical Line */}
+              <div className="absolute left-4 md:left-6 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+              
+              {/* Events */}
+              <div className="space-y-8">
+                {events.map((event) => (
+                  <div key={event.id} className="relative pl-12 md:pl-16">
+                    {/* Timeline Dot */}
+                    <div className={`absolute left-0 w-8 h-8 md:w-12 md:h-12 rounded-full flex items-center justify-center
+                      ${isEventPassed(event.date, event.time) ? 'bg-green-100' : 'bg-blue-100'}
+                      shadow-md transform transition-transform duration-300 hover:scale-110
+                    `}>
+                      {isEventPassed(event.date, event.time) ? (
+                        <CheckCircle className="w-4 h-4 md:w-6 md:h-6 text-green-600" />
+                      ) : (
+                        <AlertCircle className="w-4 h-4 md:w-6 md:h-6 text-blue-600" />
+                      )}
+                    </div>
 
-                  {/* Icon */}
-                  <div className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mb-3 md:mb-4
-                    ${isEventPassed(event.date, event.time) ? 'bg-green-100' : 'bg-blue-100'}
-                    shadow-lg transform transition-transform duration-300 hover:scale-110
-                  `}>
-                    {isEventPassed(event.date, event.time) ? (
-                      <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600" />
-                    ) : (
-                      <AlertCircle className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
-                    )}
+                    {/* Event Card */}
+                    <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                      <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">{event.name}</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4 text-blue-600" />
+                          <span>{new Date(event.date).toLocaleDateString('en-US', { 
+                            month: 'short', day: 'numeric', year: 'numeric'
+                          })}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4 text-blue-600" />
+                          <span>{new Date(`2000-01-01T${event.time}`).toLocaleTimeString('en-US', {
+                            hour: 'numeric', minute: 'numeric'
+                          })}</span>
+                        </div>
+                        <div className="flex items-center gap-2 md:col-span-2">
+                          <MapPin className="w-4 h-4 text-gray-500" />
+                          <span className="text-gray-600">{event.location}</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  {/* Content */}
-                  <h3 className="text-sm md:text-lg font-semibold text-gray-900 mb-1">{event.name}</h3>
-                  <p className="text-xs md:text-sm text-gray-600">{event.date} | {event.time}</p>
-                  <p className="text-xs md:text-sm text-gray-500">{event.location}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </CardContent>
         </Card>

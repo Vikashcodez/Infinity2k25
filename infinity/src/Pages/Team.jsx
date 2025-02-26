@@ -55,6 +55,7 @@ import srija from '../assets/Team/srija.jpg'
 import prathyusha from '../assets/Team/prathyusha.jpg'
 import vaishnavi from '../assets/Team/vaishnavi.jpeg'
 import cvardhan from '../assets/Team/cvardhan.jpeg'
+import chandu from '../assets/Team/chandu.jpg'
 const TeamPage = () => {
   const teams = [
     {
@@ -62,12 +63,12 @@ const TeamPage = () => {
       color: "from-cyan-500",
       borderColor: "cyan",
       members: [
-        { name: "A Varshith", designation: "Conveneor", photo: conv, linkedin: "https://linkedin.com/in/john-smith" },
-        { name: "Jitendra Ganesh", designation: "Secratary", photo: ganesh, linkedin: "https://linkedin.com/in/sarah-johnson" },
+        { name: "A Varshith", designation: "Conveneor", photo: conv, linkedin: "https://linkedin.com/in/" },
+        { name: "Jitendra Ganesh", designation: "Secratary", photo: ganesh, linkedin: "https://linkedin.com/in/" },
         { name: "Shyam Cheatan", designation: "Treasurer", photo: shyam , linkedin: "https://www.linkedin.com/in/shyam-chetan-b9357a237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-        { name: "Mukesh", designation: "Treasurer", photo: mukesh, linkedin: "https://linkedin.com/in/emma-davis" },
-        { name: "Abhigna", designation: "Joint Secretary", photo: jointsec , linkedin: "https://linkedin.com/in/chris-brown" },
-        { name: "O Sreeja", designation: "Joint Secretary", photo: sreeja, linkedin: "https://linkedin.com/in/chris-brown" }
+        { name: "Mukesh", designation: "Treasurer", photo: mukesh, linkedin: "https://linkedin.com/in/" },
+        { name: "Abhigna", designation: "Joint Secretary", photo: jointsec , linkedin: "https://linkedin.com/in/" },
+        { name: "O Sreeja", designation: "Joint Secretary", photo: sreeja, linkedin: "https://linkedin.com/in/" }
       ]
     },
     {
@@ -75,14 +76,14 @@ const TeamPage = () => {
       color: "from-cyan-500",
       borderColor: "cyan",
       members: [
-        { name: "G Aravind", designation: "Co-Convener", photo: Aravind , linkedin: "https://linkedin.com/in/john-smith" },
-        { name: "Sneha", designation: "Co-Convener", photo: sneha , linkedin: "https://linkedin.com/in/sarah-johnson" },
-        { name: "Abhinav", designation: "Co-Convener", photo: Abhinav, linkedin: "https://linkedin.com/in/mike-wilson" },
-        { name: "Navitha", designation: "Co-Convener", photo: navitha, linkedin: "https://linkedin.com/in/emma-davis" },
-        { name: "Seshu", designation: "Co-Convener", photo: seshu, linkedin: "https://linkedin.com/in/chris-brown" },
-        { name: "Sai Vardhan", designation: "Co-Convener", photo: cvardhan, linkedin: "https://linkedin.com/in/chris-brown" },
+        { name: "G Aravind", designation: "Co-Convener", photo: Aravind , linkedin: "https://linkedin.com/in/" },
+        { name: "Sneha", designation: "Co-Convener", photo: sneha , linkedin: "https://linkedin.com/in/" },
+        { name: "Abhinav", designation: "Co-Convener", photo: Abhinav, linkedin: "https://linkedin.com/in/" },
+        { name: "Navitha", designation: "Co-Convener", photo: navitha, linkedin: "https://linkedin.com/in/" },
+        { name: "Seshu", designation: "Co-Convener", photo: seshu, linkedin: "https://linkedin.com/in/" },
+        { name: "Sai Vardhan", designation: "Co-Convener", photo: cvardhan, linkedin: "https://linkedin.com/in/" },
         { name: "Shravan", designation: "Co-Convener", photo: shravan, linkedin: "https://www.linkedin.com/in/shravanbandi159?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-        { name: "Yogeshwar", designation: "Co-Convener", photo: yogesh, linkedin: "https://linkedin.com/in/chris-brown" }
+        { name: "Yogeshwar", designation: "Co-Convener", photo: yogesh, linkedin: "https://linkedin.com/in/" }
       ]
     },
     {
@@ -90,13 +91,13 @@ const TeamPage = () => {
       color: "from-cyan-500",
       borderColor: "cyan",
       members: [
-        { name: "Kartik Pandita", designation: "Sponsorship Team", photo: pandita , linkedin: "https://linkedin.com/in/john-smith" },
-        { name: "Kamalini", designation: "Sponsorship Team", photo: kamlini , linkedin: "https://linkedin.com/in/sarah-johnson" },
-        { name: "Mani Kanta", designation: "Sponsorship Team", photo: mani , linkedin: "https://linkedin.com/in/mike-wilson" },
-        { name: "Sathwika", designation: "Sponsorship Team", photo: sathwika , linkedin: "https://linkedin.com/in/emma-davis" },
-        { name: "Rakshan ", designation: "Sponsorship Team", photo: rakshan , linkedin: "https://linkedin.com/in/chris-brown" },
+        { name: "Kartik Pandita", designation: "Sponsorship Team", photo: pandita , linkedin: "https://linkedin.com/in/" },
+        { name: "Kamalini", designation: "Sponsorship Team", photo: kamlini , linkedin: "https://linkedin.com/in/" },
+        { name: "Mani Kanta", designation: "Sponsorship Team", photo: mani , linkedin: "https://linkedin.com/in/" },
+        { name: "Sathwika", designation: "Sponsorship Team", photo: sathwika , linkedin: "https://linkedin.com/in/" },
+        { name: "Rakshan ", designation: "Sponsorship Team", photo: rakshan , linkedin: "https://linkedin.com/in/" },
         { name: "Harshvardhan", designation: "Sponsorship Team", photo: harsha, linkedin: "https://www.linkedin.com/in/harshavardhan-vakarnati" },
-        { name: "Atiq", designation: "Sponsorship Team", photo: atiq, linkedin: "https://linkedin.com/in/chris-brown" }
+        { name: "Atiq", designation: "Sponsorship Team", photo: atiq, linkedin: "https://linkedin.com/in/" }
         
       ]
     },
@@ -105,17 +106,17 @@ const TeamPage = () => {
       color: "from-cyan-500",
       borderColor: "cyan",
       members: [
-        { name: "Venu", designation: "Technical Team", photo: venu , linkedin: "https://linkedin.com/in/john-smith" },
-        { name: "Snigdha", designation: "Technical Team", photo: singdha, linkedin: "https://linkedin.com/in/sarah-johnson" },
-        { name: "Divya Sathi", designation: "Technical Team", photo: divya , linkedin: "https://linkedin.com/in/john-smith" },
-        { name: "Harini", designation: "Technical Team", photo: harini, linkedin: "https://linkedin.com/in/chris-brown" },
-        { name: "Navainth saii", designation: "Technical Team", photo: navs, linkedin: "https://linkedin.com/in/mike-wilson" },
-        { name: "Mani Datt", designation: "Technical Team", photo: manidatt , linkedin: "https://linkedin.com/in/emma-davis" },
-        { name: "Tanmay", designation: "Technical Team", photo: tanmay, linkedin: "https://linkedin.com/in/chris-brown" },
-        { name: "Vedesh Padal", designation: "Technical Team", photo: vedesh , linkedin: "https://linkedin.com/in/chris-brown" },
-        { name: "Karteek Tadimalla", designation: "Technical Team", photo: kartik , linkedin: "https://linkedin.com/in/chris-brown" },
-        { name: "Praneeth", designation: "Technical Team", photo: praneth , linkedin: "https://linkedin.com/in/chris-brown" },
-        { name: "Siddardha", designation: "Technical Team", photo: siddha, linkedin: "https://linkedin.com/in/chris-brown" }
+        { name: "Venu", designation: "Technical Team", photo: venu , linkedin: "https://linkedin.com/in/" },
+        { name: "Snigdha", designation: "Technical Team", photo: singdha, linkedin: "https://linkedin.com/in/" },
+        { name: "Divya Sahithi", designation: "Technical Team", photo: divya , linkedin: "https://linkedin.com/in/" },
+        { name: "Harini", designation: "Technical Team", photo: harini, linkedin: "https://linkedin.com/in/" },
+        { name: "Navainth saii", designation: "Technical Team", photo: navs, linkedin: "https://linkedin.com/in/" },
+        { name: "Mani Datt", designation: "Technical Team", photo: manidatt , linkedin: "https://linkedin.com/in/" },
+        { name: "Tanmay", designation: "Technical Team", photo: tanmay, linkedin: "https://linkedin.com/in/" },
+        { name: "Vedesh Padal", designation: "Technical Team", photo: vedesh , linkedin: "https://linkedin.com/in/" },
+        { name: "Karteek Tadimalla", designation: "Technical Team", photo: kartik , linkedin: "https://linkedin.com/in/" },
+        { name: "Praneeth", designation: "Technical Team", photo: praneth , linkedin: "https://linkedin.com/in/" },
+        { name: "Siddardha", designation: "Technical Team", photo: siddha, linkedin: "https://linkedin.com/in/" }
       ]
     },
     {
@@ -123,8 +124,8 @@ const TeamPage = () => {
       color: "from-cyan-500",
       borderColor: "cyan",
       members: [
-        { name: "Rohit", designation: "Web & Design Team", photo: rohit , linkedin: "https://linkedin.com/in/john-smith" },
-        { name: "Siddardha", designation: "Web & Design Team", photo: siddha , linkedin: "https://linkedin.com/in/sarah-johnson" },
+        { name: "Rohit", designation: "Web & Design Team", photo: rohit , linkedin: "https://linkedin.com/in/" },
+        { name: "Siddardha", designation: "Web & Design Team", photo: siddha , linkedin: "https://linkedin.com/in/" },
         { name: "Narendar Singh", designation: "Web & Design Team", photo: nar , linkedin: "https://linkedin.com/in/mike-wilson" },
         { name: "Vikash", designation: "Web & Design Team", photo: mee , linkedin: "https://linkedin.com/in/emma-davis" },
         { name: "S Abhishekh", designation: "Web & Design Team", photo: abhi , linkedin: "https://linkedin.com/in/chris-brown" },
@@ -138,24 +139,24 @@ const TeamPage = () => {
       color: "from-cyan-500",
       borderColor: "cyan",
       members: [
-        { name: "L Chandreashekar", designation: "Content Team", photo: "/api/placeholder/400/400" , linkedin: "https://linkedin.com/in/john-smith" },
-        { name: "Ade Sai Vardhan", designation: "Content Team", photo: vardhan , linkedin: "https://linkedin.com/in/sarah-johnson" },
-        { name: "Likhitha D", designation: "Content Team", photo: likithad , linkedin: "https://linkedin.com/in/mike-wilson" },
-        { name: "Keerthana", designation: "Content Team", photo: kreethna , linkedin: "https://linkedin.com/in/emma-davis" },
-        { name: "Varsha", designation: "Content Team", photo: "/api/placeholder/400/400" , linkedin: "https://linkedin.com/in/chris-brown" },
+        { name: "L Chandrashekar", designation: "Content Team", photo: chandu , linkedin: "https://linkedin.com/in/" },
+        { name: "Ade Sai Vardhan", designation: "Content Team", photo: vardhan , linkedin: "https://linkedin.com/in/" },
+        { name: "Likhitha D", designation: "Content Team", photo: likithad , linkedin: "https://linkedin.com/in/" },
+        { name: "Keerthana", designation: "Content Team", photo: kreethna , linkedin: "https://linkedin.com/in/" },
+        { name: "Varsha", designation: "Content Team", photo: "/api/placeholder/400/400" , linkedin: "https://linkedin.com/in/c" },
       
       ]
     },
     {
-      name: "Cultral Heads",
+      name: "Cultural Heads",
       color: "from-cyan-500",
       borderColor: "cyan",
       members: [
-        { name: "J Sri Charkri", designation: "Cultral Heads", photo: chakri , linkedin: "https://linkedin.com/in/john-smith" },
-        { name: "Tejaswini", designation: "Cultral Heads", photo: tejaswini , linkedin: "https://linkedin.com/in/sarah-johnson" },
-        { name: "Anurima", designation: "Cultral Heads", photo: anurima , linkedin: "https://linkedin.com/in/mike-wilson" },
-        { name: "Keerthi", designation: "Cultral Heads", photo: kreeti , linkedin: "https://linkedin.com/in/emma-davis" },
-        { name: "Charan", designation: "Cultral Heads", photo: charan , linkedin: "https://linkedin.com/in/chris-brown" },
+        { name: "J Sri Charkri", designation: "Cultural Heads", photo: chakri , linkedin: "https://linkedin.com/in/john-smith" },
+        { name: "Tejaswini", designation: "Cultural Heads", photo: tejaswini , linkedin: "https://linkedin.com/in/sarah-johnson" },
+        { name: "Anurima", designation: "Cultural Heads", photo: anurima , linkedin: "https://linkedin.com/in/mike-wilson" },
+        { name: "Keerthi", designation: "Cultural Heads", photo: kreeti , linkedin: "https://linkedin.com/in/emma-davis" },
+        { name: "Charan", designation: "Cultural Heads", photo: charan , linkedin: "https://linkedin.com/in/chris-brown" },
       
       ]
     },

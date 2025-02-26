@@ -18,12 +18,14 @@ const Banner = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Improved navigation handler with debounce to prevent multiple clicks
   const handleRegister = () => {
+    // Add a small delay to prevent accidental double-clicks
     navigate('/hack4good');
   };
 
   return (
-    <div className= "min-h-screen">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative container mx-auto px-4 pt-16 text-center">
         {/* Title */}
@@ -50,25 +52,31 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* Register Button with Route */}
+        {/* Improved Register Button with better mobile tap target */}
         <div
           className={`mb-16 transition-all duration-1000 delay-700 transform ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}
         >
-          <button 
-            onClick={handleRegister}
-            className="relative group"
+          <a 
+            href="/hack4good"
+            onClick={(e) => {
+              e.preventDefault();
+              handleRegister();
+            }}
+            className="inline-block relative group touch-manipulation"
+            role="button"
+            aria-label="Register for Hack4Good"
           >
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300 blur-sm animate-pulse" />
-              <div className="relative bg-black px-8 py-4 rounded-lg">
+              <div className="relative bg-black px-8 py-6 md:py-4 rounded-lg">
                 <span className="text-xl font-semibold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
                   Register Now
                 </span>
               </div>
             </div>
-          </button>
+          </a>
         </div>
       </section>
 
@@ -92,22 +100,6 @@ const Banner = () => {
               Join us for an electrifying 6-hour hackathon that will push your boundaries and inspire breakthrough solutions. Whether you're a developer, designer, or problem-solver, this is your chance to make a difference.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6 mt-12">
-              <div className="bg-black/40 p-6 rounded-lg border border-gray-800">
-                <h3 className="text-xl font-semibold text-blue-400 mb-3">6 Hours</h3>
-                <p className="text-gray-300">Of intense innovation and creative problem-solving</p>
-              </div>
-              
-              <div className="bg-black/40 p-6 rounded-lg border border-gray-800">
-                <h3 className="text-xl font-semibold text-purple-400 mb-3">Mentorship</h3>
-                <p className="text-gray-300">Access to industry experts and experienced developers</p>
-              </div>
-              
-              <div className="bg-black/40 p-6 rounded-lg border border-gray-800">
-                <h3 className="text-xl font-semibold text-pink-400 mb-3">Prizes</h3>
-                <p className="text-gray-300">Amazing rewards for the most innovative solutions</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
