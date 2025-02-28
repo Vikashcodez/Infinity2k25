@@ -216,7 +216,7 @@ const Register = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <Label htmlFor="name">Full Name</Label>
+                                    <Label htmlFor="name"><p className='text-white'>Full Name</p></Label>
                                     <Input 
                                         id="name" 
                                         name="name" 
@@ -228,7 +228,7 @@ const Register = () => {
                                 </div>
                                 
                                 <div className="space-y-2">
-                                    <Label htmlFor="college">College Name</Label>
+                                    <Label htmlFor="college"><p className='text-white'>College Name</p></Label>
                                     <Input 
                                         id="college" 
                                         name="college" 
@@ -240,7 +240,7 @@ const Register = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label htmlFor="department">Department</Label>
+                                    <Label htmlFor="department"><p className='text-white'>Department</p></Label>
                                     <Input 
                                         id="department" 
                                         name="department" 
@@ -252,7 +252,7 @@ const Register = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label htmlFor="year">Year</Label>
+                                    <Label htmlFor="year"><p className='text-white'>Year</p></Label>
                                     <Input 
                                         id="year" 
                                         name="year" 
@@ -264,7 +264,7 @@ const Register = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label htmlFor="email">Email Address</Label>
+                                    <Label htmlFor="email"><p className='text-white'>Email Address</p></Label>
                                     <Input 
                                         id="email" 
                                         name="email" 
@@ -277,7 +277,7 @@ const Register = () => {
                                 </div>
 
                                 <div className="space-y-2">
-                                    <Label htmlFor="phone">Phone Number</Label>
+                                    <Label htmlFor="phone"><p className='text-white'>Phone Number</p></Label>
                                     <Input 
                                         id="phone" 
                                         name="phone" 
@@ -291,7 +291,7 @@ const Register = () => {
 
                             <div className="space-y-4">
                                 <div className="space-y-2">
-                                    <Label htmlFor="teamSize">Team Size</Label>
+                                    <Label htmlFor="teamSize"><p className='text-white'>Team Size</p></Label>
                                     <Select 
                                         value={formData.teamSize}
                                         onValueChange={handleTeamSizeChange}
@@ -310,7 +310,7 @@ const Register = () => {
 
                                 {formData.teamMembers.map((member, index) => (
                                     <div key={index} className="space-y-2">
-                                        <Label htmlFor={`teamMember${index}`}>Team Member {index + 1}</Label>
+                                        <Label htmlFor={`teamMember${index}`}><p className='text-white'>Team Member</p> {index + 1}</Label>
                                         <Input
                                             id={`teamMember${index}`}
                                             value={member}
@@ -323,7 +323,7 @@ const Register = () => {
 
                             <div className="space-y-4">
                                 <div className="space-y-2">
-                                    <Label htmlFor="uploadImage">Upload Image</Label>
+                                    <Label htmlFor="uploadImage"><p className='text-white'>Upload Image</p></Label>
                                     <Input 
                                         id="uploadImage" 
                                         type="file" 

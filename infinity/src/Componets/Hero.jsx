@@ -4,8 +4,11 @@ import { Canvas } from "@react-three/fiber";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Scene from "../Componets/Scene";
-import OUWhiteLogo from "../assets/volta.png";
+import OUWhiteLogo from "../assets/OUWhiteLogo.png";
 import { SpotLight } from "./ui/SpotLight";
+// Import an image to use above "Presents"
+// You'll need to add your image to the assets folder
+import PresentsImage from "../assets/volta.png"; // Replace with your actual image path
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -129,7 +132,7 @@ function App() {
         <section className="relative h-screen w-full">
           {isMobile ? (
             <div className="text-white text-center absolute inset-0 pt-8 px-4 z-10">
-              <h2 className="text-3xl font-semibold mb-2 tracking-wide">University College of Engineering</h2>
+              
               <h2 className="text-3xl font-semibold mb-1">Department of</h2>
               <h1 className="text-3xl font-semibold">
                 <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
@@ -139,7 +142,7 @@ function App() {
             </div>
           ) : (
             <div className="text-white text-center absolute right-1/2 left-0 top-1/2 -translate-y-1/2 w-[50%] px-4">
-              <h2 className="text-4xl font-semibold tracking-wide mb-2">University College of Engineering</h2>
+              
               <h2 className="text-4xl font-semibold">Department of</h2>
               <h1 className="text-4xl font-semibold">
                 <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
@@ -161,7 +164,7 @@ function App() {
           {isMobile ? (
             <div className="text-white w-full text-center px-4">
               <div className="flex flex-col justify-center items-center space-y-4">
-                <h3 className="text-2xl font-medium mb-4">Sponsored by</h3>
+              <h2 className="text-3xl font-semibold mb-2 tracking-wide">University College of Engineering</h2>
                 <img src={OUWhiteLogo} alt="Osmania University Logo" className="w-3/4" />
               </div>
             </div>
@@ -170,7 +173,7 @@ function App() {
               <div className="w-[50%]"></div>
               <div className="text-white w-[50%] text-center px-4">
                 <div className="flex flex-col justify-center items-center space-y-6">
-                  <h3 className="text-2xl font-medium">Sponsored by</h3>
+                <h2 className="text-4xl font-semibold tracking-wide mb-2">University College of Engineering</h2>
                   <img src={OUWhiteLogo} alt="Osmania University Logo" className="w-auto" />
                 </div>
               </div>
@@ -182,12 +185,28 @@ function App() {
         <section className={`relative ${isMobile ? "h-[50vh]" : "h-screen"} w-full flex items-center`}>
           {isMobile ? (
             <div className="text-white w-full text-center px-4">
-              <h2 className="text-4xl font-bold">Presents</h2>
+              {/* Increased image size for mobile */}
+              <div className="flex flex-col items-center justify-center space-y-4">
+                <img 
+                  src={PresentsImage} 
+                  alt="Presents Icon" 
+                  className="w-35 h-35 object-contain" /* Increased from w-24 h-24 */
+                />
+                <h2 className="text-4xl font-bold">Presents</h2>
+              </div>
             </div>
           ) : (
             <>
               <div className="text-white w-[50%] text-center px-4">
-                <h2 className="text-3xl font-bold">Presents</h2>
+                {/* Increased image size for desktop */}
+                <div className="flex flex-col items-center justify-center space-y-6">
+                  <img 
+                    src={PresentsImage} 
+                    alt="Presents Icon" 
+                    className="w-45 h-45 object-contain" /* Increased from w-32 h-32 */
+                  />
+                  <h2 className="text-3xl font-bold">Presents</h2>
+                </div>
               </div>
               <div className="w-[50%]"></div>
             </>

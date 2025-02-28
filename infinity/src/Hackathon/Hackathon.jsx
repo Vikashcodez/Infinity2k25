@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from './Banner'
+import Banner from './Banner.tsx'
 import Navbar from './Navbar'
 import Prizes from './Prizes'
 import Desc from './Desc'

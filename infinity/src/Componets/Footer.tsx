@@ -34,14 +34,14 @@ const Footer: FC = () => {
                 <div className='flex flex-row gap-4 justify-center align-middle'>
                   <div className="text-xl font-bold mb-2">FOLLOW US:</div>
                   <div>
-                    <a href="https://www.instagram.com/infinity2k24ou/" className="text-gray-400 opacity-50 hover:opacity-100">
+                    <a href="https://www.instagram.com/infinity2k25ou?igsh=MWIzbnA3dWNkamJ3Yg==" className="text-gray-400 opacity-50 hover:opacity-100">
                       <img src={InstagramLogoWhite} className="h-8 w-8 sm:h-6 sm:w-6" alt="Instagram Logo">
                       </img>
                     </a>
                   </div>
                   <div>
                     <a href="#" className="text-gray-400 hover:text-white">
-                      <a href="https://in.linkedin.com/in/infinity2k23" className="text-gray-400 opacity-50 hover:opacity-100">
+                      <a href="https://in.linkedin.com/in/infinity2k25" className="text-gray-400 opacity-50 hover:opacity-100">
                           <img src={LinkedInLogoWhite} className="h-8 w-8 sm:h-6 sm:w-6" alt="LinkedIn Logo">
                           </img>
                       </a>

@@ -56,6 +56,7 @@ import prathyusha from '../assets/Team/prathyusha.jpg'
 import vaishnavi from '../assets/Team/vaishnavi.jpeg'
 import cvardhan from '../assets/Team/cvardhan.jpeg'
 import chandu from '../assets/Team/chandu.jpg'
+import varsha from '../assets/Team/varsha.jpeg'
 const TeamPage = () => {
   const teams = [
     {
@@ -143,7 +144,7 @@ const TeamPage = () => {
         { name: "Ade Sai Vardhan", designation: "Content Team", photo: vardhan , linkedin: "https://linkedin.com/in/" },
         { name: "Likhitha D", designation: "Content Team", photo: likithad , linkedin: "https://linkedin.com/in/" },
         { name: "Keerthana", designation: "Content Team", photo: kreethna , linkedin: "https://linkedin.com/in/" },
-        { name: "Varsha", designation: "Content Team", photo: "/api/placeholder/400/400" , linkedin: "https://linkedin.com/in/c" },
+        { name: "Varsha", designation: "Content Team", photo: varsha , linkedin: "https://linkedin.com/in/c" },
       
       ]
     },

@@ -195,7 +195,7 @@ const Register = () => {
             const res = await axios.post(`${API_BASE_URL}/api/register/Hack4good`, form, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
-            alert('Registration successful!');
+            alert('Your Details Submmited, You Will Get conformation! Through Mail');
             console.log(res.data);
         } catch (err) {
             console.error('Error submitting form:', err);

@@ -167,50 +167,7 @@ const ProblemStatement = () => {
       </div>
       
       {/* Implementation Challenges Section */}
-      <div className="mb-6">
-        <button 
-          onClick={() => toggleSection('challenges')}
-          className="w-full flex justify-between items-center bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-pink-900/40 p-4 rounded-lg border border-gray-700 text-left"
-        >
-          <div className="flex items-center">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-lg mr-4">
-              <FaLightbulb className="text-white text-xl" />
-            </div>
-            <h2 className="text-2xl font-bold text-white">Implementation Challenges</h2>
-          </div>
-          {expandedSection === 'challenges' ? 
-            <FaAngleUp className="text-gray-400 text-2xl" /> : 
-            <FaAngleDown className="text-gray-400 text-2xl" />
-          }
-        </button>
-        
-        {expandedSection === 'challenges' && (
-          <div className="bg-gray-800/30 rounded-b-lg p-6 border-x border-b border-gray-700 mt-1 animate-fadeIn">
-            <div className="space-y-6">
-              <div className="bg-gray-800/50 rounded-xl p-5 border-l-4 border-purple-500">
-                <h3 className="text-lg font-semibold text-white mb-2">Hardware Limitations</h3>
-                <p className="text-gray-300">
-                  A hardware-based solution, such as a wearable device (band, belt, etc.), can be built and can function effectively. However, ensuring its accessibility to every woman across the country—whether in urban, rural, or remote areas—is nearly impossible. Safety concerns are not limited to specific locations, making widespread distribution and adoption of such hardware solutions impractical.
-                </p>
-              </div>
-              
-              <div className="bg-gray-800/50 rounded-xl p-5 border-l-4 border-purple-500">
-                <h3 className="text-lg font-semibold text-white mb-2">Software Constraints</h3>
-                <p className="text-gray-300">
-                  A software-based solution, such as a mobile application, can achieve large-scale reach, similar to how Aarogya Setu was widely adopted during the COVID-19 pandemic. However, practical limitations exist. An app with an SOS button, requiring a person in distress to press a button multiple times, is not always feasible in real-life emergency situations. Continuous voice recording for distress detection is also not a viable option due to privacy concerns and technical limitations.
-                </p>
-              </div>
-              
-              <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-5 rounded-xl border border-gray-700">
-                <h3 className="text-lg font-semibold text-blue-400 mb-2">Our Challenge to You</h3>
-                <p className="text-gray-200">
-                  Given these challenges, we're looking for innovative solutions that balance technical feasibility with practical implementation. Your approach should consider real-world constraints while providing genuine value to users. Think beyond conventional approaches and consider how emerging technologies might be applied in novel ways to solve these problems.
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+      
       
       {/* Hackathon Structure Section */}
       <div className="mb-6">
