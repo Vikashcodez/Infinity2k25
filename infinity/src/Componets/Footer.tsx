@@ -41,7 +41,7 @@ const Footer: FC = () => {
                   </div>
                   <div>
                     <a href="#" className="text-gray-400 hover:text-white">
-                      <a href="https://in.linkedin.com/in/infinity2k25" className="text-gray-400 opacity-50 hover:opacity-100">
+                      <a href="https://www.linkedin.com/in/infinityoucse?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-gray-400 opacity-50 hover:opacity-100">
                           <img src={LinkedInLogoWhite} className="h-8 w-8 sm:h-6 sm:w-6" alt="LinkedIn Logo">
                           </img>
                       </a>
