@@ -11,8 +11,8 @@ const FacultyPage = () => {
     },
     {
       name: "Dr.V.B.Narsimha",
-      designation: "Associate Professor of Computer  Science",
-      expertise: "Faculty Convenor",
+      designation: "Faculty Convenor",
+      expertise: "Associate Professor of Computer  Science",
       imageUrl: faculity
     }
   ];

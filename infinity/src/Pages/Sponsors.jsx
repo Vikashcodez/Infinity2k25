@@ -2,6 +2,30 @@ import React from 'react';
 import spon from '../assets/volta.png';
 
 const SponsorshipTiers = () => {
+  const PlatinumMedalIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-gray-800">
+      <path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+  );
+
+  const GoldMedalIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-yellow-700">
+      <path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+  );
+
+  const SilverMedalIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-gray-500">
+      <path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+  );
+
+  const BronzeMedalIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 text-amber-700">
+      <path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+  );
+
   return (
     <div className="min-h-screen  p-6 flex flex-col items-center justify-center">
       {/* Header Section - Logo Left, Description Right */}
@@ -21,8 +45,6 @@ const SponsorshipTiers = () => {
             <h2 className="text-2xl font-semibold text-blue-300 mb-3">VOLTA</h2>
             <p className="text-gray-300 mb-6">
             Volta Ride App is revolutionizing India's mobility and logistics landscape with its 0% commission model, ensuring a fair, cost-effective experience for both drivers and consumers. Headquartered in Hyderabad, Volta Ride not only provides secure and economical ride-booking services but also offers last-mile delivery and parcel services, making urban transportation and logistics more efficient and sustainable. With a commitment to affordability, transparency, and innovation, Volta Ride is reshaping mobility for a better future.
-
-
             </p>
             <a 
               href="https://play.google.com/store/apps/details?id=com.yourvolta&pcampaignid=web_share&pli=1" 
@@ -54,7 +76,7 @@ const SponsorshipTiers = () => {
           <div className="absolute top-4 right-4">
             <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
               <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                <span className="text-gray-800 text-sm font-bold">🥈</span>
+                <PlatinumMedalIcon />
               </div>
             </div>
           </div>
@@ -75,7 +97,7 @@ const SponsorshipTiers = () => {
           <div className="absolute top-4 right-4">
             <div className="w-12 h-12 rounded-full bg-yellow-200 flex items-center justify-center">
               <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
-                <span className="text-yellow-800 text-sm font-bold">🥇</span>
+                <GoldMedalIcon />
               </div>
             </div>
           </div>
@@ -95,7 +117,7 @@ const SponsorshipTiers = () => {
           <div className="absolute top-4 right-4">
             <div className="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center">
               <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-800 text-sm font-bold">🥈</span>
+                <SilverMedalIcon />
               </div>
             </div>
           </div>
@@ -115,7 +137,7 @@ const SponsorshipTiers = () => {
           <div className="absolute top-4 right-4">
             <div className="w-12 h-12 rounded-full bg-amber-700 flex items-center justify-center">
               <div className="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center">
-                <span className="text-amber-100 text-sm font-bold">🥉</span>
+                <BronzeMedalIcon />
               </div>
             </div>
           </div>

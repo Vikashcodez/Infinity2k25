@@ -30,10 +30,10 @@ const CardContent = ({ className = "", children, ...props }) => (
 const EventTracking = () => {
   const events = [
     { id: 1, name: "Brochure Launch", date: "2025-02-22", time: "15:00", location: "Conference Hall CSE Dept" },
-    { id: 2, name: "WorkShop", date: "2025-03-14", time: "10:00", location: "Conference Hall CSE Dept" },
-    { id: 3, name: "FlashMob", date: "2025-03-20", time: "14:00", location: "Arts College" },
-    { id: 4, name: "Opening Ceremony", date: "2025-03-22", time: "09:00", location: "Conference Hall CSE Dept" },
-    { id: 5, name: "Technical Events", date: "2025-03-22", time: "11:00", location: "Conference Hall CSE Dept" }
+    { id: 2, name: "WorkShop", date: "2025-03-15", time: "10:00", location: "Seminar Hall CSE Dept" },
+    { id: 3, name: "FlashMob", date: "2025-03-20", time: "14:00", location: "Engg/Arts College" },
+    { id: 4, name: "Opening Ceremony", date: "2025-03-21", time: "09:00", location: "Seminar Hall CSE Dept" },
+    { id: 5, name: "Technical Events", date: "2025-03-21", time: "11:00", location: "Seminar Hall CSE Dept" }
   ];
 
   const isEventPassed = (date, time) => {

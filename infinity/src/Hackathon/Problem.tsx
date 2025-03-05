@@ -225,17 +225,17 @@ const ProblemStatement = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="bg-gradient-to-b from-yellow-900/30 to-yellow-800/10 rounded-xl p-5 border border-yellow-700/30 text-center">
                     <h4 className="text-lg font-semibold text-yellow-400 mb-2">🥇 1st Place</h4>
-                    <p className="text-yellow-300 text-2xl font-bold">₹25,000</p>
+                    <p className="text-yellow-300 text-2xl font-bold">₹15,000</p>
                   </div>
                   
                   <div className="bg-gradient-to-b from-gray-700/30 to-gray-600/10 rounded-xl p-5 border border-gray-500/30 text-center">
                     <h4 className="text-lg font-semibold text-gray-300 mb-2">🥈 2nd Place</h4>
-                    <p className="text-gray-200 text-2xl font-bold">₹15,000</p>
+                    <p className="text-gray-200 text-2xl font-bold">₹10,000</p>
                   </div>
                   
                   <div className="bg-gradient-to-b from-amber-800/30 to-amber-700/10 rounded-xl p-5 border border-amber-600/30 text-center">
                     <h4 className="text-lg font-semibold text-amber-400 mb-2">🥉 3rd Place</h4>
-                    <p className="text-amber-300 text-2xl font-bold">₹10,000</p>
+                    <p className="text-amber-300 text-2xl font-bold">₹5,000</p>
                   </div>
                 </div>
               </div>

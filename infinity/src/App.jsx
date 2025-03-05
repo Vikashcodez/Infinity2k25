@@ -30,6 +30,7 @@ import Techteam from './Admin/Techteam'
 import Hackteam from "./Admin/Hackteam"
 import Hackreg from './Admin/Hackreg'
 import Hack from './Registration/Hack'
+import Work1 from './Registration/Work1'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -67,6 +68,7 @@ const App = () => {
           <Route path="/Drama-tech" element={<Drama />} />
           <Route path="/puzzlebit" element={<Puzzlebit />} />
           <Route path="/hack4good" element={<Hack />} />
+          <Route path="/work1" element={<Work1 />} />
 
           
 

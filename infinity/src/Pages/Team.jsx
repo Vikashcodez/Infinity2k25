@@ -57,6 +57,7 @@ import vaishnavi from '../assets/Team/vaishnavi.jpeg'
 import cvardhan from '../assets/Team/cvardhan.jpeg'
 import chandu from '../assets/Team/chandu.jpg'
 import varsha from '../assets/Team/varsha.jpeg'
+import uma from '../assets/Team/uma.jpeg'
 const TeamPage = () => {
   const teams = [
     {
@@ -178,10 +179,10 @@ const TeamPage = () => {
       color: "from-cyan-500",
       borderColor: "cyan",
       members: [
-        { name: "Gangothri", designation: "Arts & Craft Team", photo: "/api/placeholder/400/400" , linkedin: "https://linkedin.com/in/chris-brown" },
+        
         { name: "Namratha", designation: "Arts & Craft Team", photo: namarat , linkedin: "https://linkedin.com/in/john-smith" },
         { name: "Devika", designation: "Arts & Craft Team", photo: devika , linkedin: "https://linkedin.com/in/sarah-johnson" },
-        { name: "Uma Devi", designation: "Arts & Craft Team", photo: "/api/placeholder/400/400" , linkedin: "https://linkedin.com/in/mike-wilson" },
+        { name: "Uma Devi", designation: "Arts & Craft Team", photo: uma , linkedin: "https://linkedin.com/in/mike-wilson" },
         { name: "Swetha G", designation: "Arts & Craft Team", photo: swetha , linkedin: "https://linkedin.com/in/emma-davis" },
         { name: "Deekshita", designation: "Arts & Craft Team", photo: deekshita, linkedin: "https://linkedin.com/in/chris-brown" },
       

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { X, Calendar, DollarSign, Book, Users } from "lucide-react";
+import { X, Calendar, IndianRupee, Book, Users } from "lucide-react";
 import infy from '../assets/Events/infy.png'
 import techtac from '../assets/Events/3.png'
 import technothr from '../assets/Events/5.png'
@@ -52,7 +52,7 @@ const EventCard = ({ event, onClick, index }) => {
                   <span>{event.date}</span>
                 </div>
                 <div className="flex items-center gap-1 text-sm text-gray-400">
-                  <DollarSign className="h-4 w-4 text-green-400" />
+                  <IndianRupee className="h-4 w-4 text-green-400" />
                   <span>{event.fee}</span>
                 </div>
                 <div className="flex items-center gap-1 text-sm text-gray-400">
@@ -120,7 +120,8 @@ const EventModal = ({ event, isOpen, onClose }) => {
             </div>
           </div>
           <div className="flex items-center gap-2 p-3 rounded-lg bg-gray-800/50 border border-gray-700">
-            <DollarSign className="text-green-400" />
+            <IndianRupee className="text-green-400" />
+            
             <div>
               <div className="text-sm text-gray-400">Fee</div>
               <div className="text-gray-200">{event.fee}</div>
