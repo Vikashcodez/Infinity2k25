@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import hack from '../assets/hacck.jpeg';
+import hack from '../assets/hack4.jpeg';
+// You'll need to import your logo image
+// Import example - update path to your actual logo file
+import logoImage from '../assets/unstop.png';
 
 const Banner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,24 +21,33 @@ const Banner = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Improved navigation handler with debounce to prevent multiple clicks
+  // Fixed: Instead of using navigate for external URL, use window.open
   const handleRegister = () => {
-    // Add a small delay to prevent accidental double-clicks
-    navigate('/hack4good');
+    window.open('https://unstop.com/o/hRkj1Aa?lb=K48T4T7M&utm_medium=Share&utm_source=WhatsApp', '_blank');
   };
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative container mx-auto px-4 pt-16 text-center">
-        {/* Title */}
-        <h1
-          className={`text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 transition-all duration-1000 transform ${
-            isVisible ? 'translate-y-0 opacity-100' : '-translate-y-12 opacity-0'
-          }`}
-        >
-          Hack4Good 2025
-        </h1>
+        {/* Title with "powered by" logo */}
+        <div className={`transition-all duration-1000 transform ${
+          isVisible ? 'translate-y-0 opacity-100' : '-translate-y-12 opacity-0'
+        }`}>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+            Hack4Good 2025
+          </h1>
+          
+          {/* Powered by with larger logo */}
+          <div className="flex items-center justify-center mb-8 space-x-3">
+            <span className="text-lg text-gray-300">Powered by</span>
+            <img 
+              src={logoImage} 
+              alt="Sponsor Logo" 
+              className="h-12 md:h-16 object-contain" 
+            />
+          </div>
+        </div>
 
         {/* Centered Image */}
         <div className={`relative max-w-4xl mx-auto my-12 transition-all duration-1000 delay-300 transform ${
@@ -52,18 +64,16 @@ const Banner = () => {
           </div>
         </div>
 
-        {/* Improved Register Button with better mobile tap target */}
+        {/* Fixed Register Button - using proper anchor tag for external link */}
         <div
           className={`mb-16 transition-all duration-1000 delay-700 transform ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}
         >
           <a 
-            href="/hack4good"
-            onClick={(e) => {
-              e.preventDefault();
-              handleRegister();
-            }}
+            href="https://unstop.com/o/hRkj1Aa?lb=K48T4T7M&utm_medium=Share&utm_source=WhatsApp"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block relative group touch-manipulation"
             role="button"
             aria-label="Register for Hack4Good"

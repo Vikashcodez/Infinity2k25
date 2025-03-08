@@ -58,6 +58,7 @@ import cvardhan from '../assets/Team/cvardhan.jpeg'
 import chandu from '../assets/Team/chandu.jpg'
 import varsha from '../assets/Team/varsha.jpeg'
 import uma from '../assets/Team/uma.jpeg'
+import pra from '../assets/Team/pra.jpeg'
 const TeamPage = () => {
   const teams = [
     {
@@ -185,6 +186,7 @@ const TeamPage = () => {
         { name: "Uma Devi", designation: "Arts & Craft Team", photo: uma , linkedin: "https://linkedin.com/in/mike-wilson" },
         { name: "Swetha G", designation: "Arts & Craft Team", photo: swetha , linkedin: "https://linkedin.com/in/emma-davis" },
         { name: "Deekshita", designation: "Arts & Craft Team", photo: deekshita, linkedin: "https://linkedin.com/in/chris-brown" },
+        { name: "Pranusha", designation: "Arts & Craft Team", photo: pra, linkedin: "https://linkedin.com/in/chris-brown" },
       
       ]
     },

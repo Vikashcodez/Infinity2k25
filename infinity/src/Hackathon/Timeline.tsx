@@ -23,6 +23,13 @@ const Timeline = () => {
     return new Date(parseInt(year), monthMap[month], parseInt(day.replace(',', '')));
   };
 
+  // Fix for comparing dates correctly (ignoring time)
+  const isSameDay = (date1, date2) => {
+    return date1.getFullYear() === date2.getFullYear() &&
+           date1.getMonth() === date2.getMonth() &&
+           date1.getDate() === date2.getDate();
+  };
+
   const events = [
     { 
       date: 'Feb 26, 2025', 
@@ -32,35 +39,35 @@ const Timeline = () => {
       period: 'Feb 26 - Mar 08, 2025'
     },
     { 
-      date: 'Mar 08, 2025', 
+      date: 'Mar 12, 2025', 
       event: 'Round 1 Submission Deadline',
       description: 'Last day to submit your project proposal. Only the most promising ideas will move forward!',
       badge: 'Round 1',
       period: 'Feb 26 - Mar 08, 2025'
     },
     { 
-      date: 'Mar 10, 2025', 
+      date: 'Mar 13, 2025', 
       event: 'Round 1 Results Announced',
       description: 'Selected teams will be notified to proceed to the prototype development phase.',
       badge: 'Results',
       period: 'Mar 10, 2025'
     },
     { 
-      date: 'Mar 11, 2025',   
+      date: 'Mar 13, 2025',   
       event: 'Round 2: Prototype Development Begins',
       description: 'Develop a working prototype showcasing your idea\'s key features and real-world impact.',
       badge: 'Round 2',
       period: 'Mar 11 - Mar 17, 2025'
     },
     { 
-      date: 'Mar 17, 2025',   
+      date: 'Mar 18, 2025',   
       event: 'Round 2 Submission Deadline',
       description: 'Submit a video demo of your working prototype by the end of the day.',
       badge: 'Round 2',
       period: 'Mar 11 - Mar 17, 2025'
     },
     { 
-      date: 'Mar 19, 2025',   
+      date: 'Mar 20, 2025',   
       event: 'Round 2 Results Announced',
       description: 'Top 30 teams will be selected to present at the Grand Finale.',
       badge: 'Results',
@@ -82,12 +89,12 @@ const Timeline = () => {
     },
   ];
 
-  // Determine the status of each event
+  // Determine the status of each event - fixed comparison
   const eventsWithStatus = events.map(event => {
     const eventDate = parseDate(event.date);
-    const isUpcoming = eventDate > currentDate;
-    const isLive = eventDate.toDateString() === currentDate.toDateString();
+    const isLive = isSameDay(eventDate, currentDate);
     const isPast = eventDate < currentDate && !isLive;
+    const isUpcoming = !isLive && !isPast;
     
     return {
       ...event,
@@ -113,7 +120,7 @@ const Timeline = () => {
   };
 
   return (
-    <section id="timeline" className="py-20  text-white">
+    <section id="timeline" className="py-20 text-white">
       <div className="container mx-auto px-6">
         <h2 className="text-5xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
           Hackathon Timeline
